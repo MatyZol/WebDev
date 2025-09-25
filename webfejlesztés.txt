@@ -1,0 +1,26 @@
+ne legyen a dependnyk be verziószám ha nem muszáj
+annotációval lehet mindennt vezérleni
+SpringBootApplication mindnent konfigurál
+kell egy kiterjesztés (extends SpringBootServletInitializer) mert weben vagyunk
+Ha foglalt a 8080 port akkor a resourcesba kell egy új file application.properties, ahhoz konfigolunk
+Ha szerver port tulajdonság változik akkor server.port=8081
+sprint profilokkal tutudnk különböző konfigokat csinálni és ki tudjuk választani hpgy melyi legyen aktív és így tudunk különböző adatb. szerverekhez kapcsolódnbi
+OffsetDateTime: időzóna,dátum,idő
+csak addig van default konstruktor amíg nincs másik ->> ezért kel mind a kettő ha szeretnénk
+@EqualsAndHashCode(onlyExplicitlyIncluded = true): csak az fog bekerülni az hashcode ba amit mi szerenénk
+|
+-->@EqualsAndHashCode.Include megy az adott mező felé
+
+@GetMapping("/api/student") et két metódushoz nem lehet hozzákötni!!!
+|
+v
+@GetMapping("/api/student/{neptun}")
+    Student getOne(@PathVariable String neptun); ugyan annak kell lennie a változónak (itt neptun)
+
+lehet neki paraméterezést beállítani @PathVariable("azonosítóval")
+
+/////////////
+Component = komponens ->> példányosítania kell a trendszernek
+beadandóhoz adat -> JavaFaker
+@Repository/@Component osztályt fogja implementálni perzisztenciának
+Ha többre teszük rá akkor összeakad a spring -> @Primary val lehet megoldani
