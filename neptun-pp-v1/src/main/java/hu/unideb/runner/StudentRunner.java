@@ -4,6 +4,7 @@ import com.github.javafaker.Faker;
 import com.github.javafaker.Name;
 import hu.unideb.model.Student;
 import hu.unideb.repository.StudentRepository;
+import hu.unideb.web.StudentControllerImpl;
 import lombok.AllArgsConstructor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -31,11 +32,10 @@ public class StudentRunner implements CommandLineRunner {
 
 
 
+
     public static String getNeptun(){
         return IntStream.range(0,6)
-                .mapToObj(
-                        pos -> pos == 0
-                ? LETTERS.charAt(RANDOM.nextInt(LETTERS.length())) :
+                .mapToObj(pos -> pos == 0 ? LETTERS.charAt(RANDOM.nextInt(LETTERS.length())) :
                     (LETTERS+DIGITS).charAt(RANDOM.nextInt((LETTERS+DIGITS).length()))
                 ).map(String::valueOf).collect(Collectors.joining());
     }
@@ -43,6 +43,7 @@ public class StudentRunner implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {
         System.out.println("Hello World!");
+
         for (int i = 0; i < 100; i++) {
             Name name = FAKER.name();
             Student student = Student.builder().neptun(getNeptun()).name(name.firstName()+" "+name.lastName()).program(Student.Program.radom()).build();

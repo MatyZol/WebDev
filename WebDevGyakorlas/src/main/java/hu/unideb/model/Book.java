@@ -7,7 +7,6 @@ import lombok.*;
 @NoArgsConstructor
 @EqualsAndHashCode
 @Builder
-
 public class Book {
 
     private String ISBN;
