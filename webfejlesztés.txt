@@ -24,3 +24,14 @@ Component = komponens ->> példányosítania kell a trendszernek
 beadandóhoz adat -> JavaFaker
 @Repository/@Component osztályt fogja implementálni perzisztenciának
 Ha többre teszük rá akkor összeakad a spring -> @Primary val lehet megoldani
+
+
+RequestBody: PoST  és PUT kérésnél használjuk
+a http patheknél a sorrend számít
+consume : mit fogad
+produces: mit tudunk előállítani
+content disposition: milyen néven töltsük le a fájlt
+@GetMapping("/api/student/download-v2")
+    ResponseEntity<Student> download2();
+ezzel tudunk manimulálni a dolgokat
+
