@@ -1,5 +1,6 @@
 package hu.unideb.web;
 
+import hu.unideb.model.Program;
 import hu.unideb.model.Student;
 import hu.unideb.repository.StudentRepository;
 import hu.unideb.util.NeptunUtils;
@@ -10,7 +11,6 @@ import org.springframework.http.HttpHeaders;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.time.OffsetDateTime;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
@@ -49,7 +49,7 @@ public class StudentControllerImpl
     @Override
     public List<Student> search(@NonNull Optional<String> neptun,
                                 @NonNull Optional<String> name,
-                                @NonNull Optional<Student.Program> program) {
+                                @NonNull Optional<Program> program) {
 
         log.info("{} {} {}",neptun,name,program);
         return repository.findAll().stream()
@@ -71,29 +71,29 @@ public class StudentControllerImpl
     public Student getOne(
             @NonNull final String neptun) {
 
-        return repository.findByNeptun(neptun)
+        return repository.findById(neptun)
                 .orElseThrow(IllegalArgumentException::new);
     }
 
     @Override
     public void deleteByNeptun(@NonNull String neptun) {
-        repository.deleteByNeptun(neptun);
+        repository.deleteById(neptun);
     }
 
     @Override
     public Student createOne(@NonNull Student student) {
         student.setNeptun(NeptunUtils.getNeptun());
-        return repository.createOne(student);
+        return repository.save(student);
     }
 
     @Override
     public Student updateOne(@NonNull Student student) {
-        return repository.updateOne(student);
+        return repository.save(student);
     }
 
     @Override
     public Student createOneWithNeptun(@NonNull Student student) {
-        return repository.createOne(student);
+        return repository.save(student);
     }
 
 

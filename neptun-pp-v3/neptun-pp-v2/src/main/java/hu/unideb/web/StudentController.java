@@ -1,10 +1,10 @@
 package hu.unideb.web;
 
+import hu.unideb.model.Program;
 import hu.unideb.model.Student;
 import lombok.NonNull;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
 import java.util.List;
 import java.util.Optional;
 
@@ -24,7 +24,7 @@ public interface StudentController {
     @GetMapping("/api/student/search")
     List<Student> search(@NonNull @RequestParam Optional<String> neptun,
                          @NonNull @RequestParam Optional<String> name,
-                         @NonNull @RequestParam Optional<Student.Program> program);
+                         @NonNull @RequestParam Optional<Program> program);
 
     @GetMapping("/api/student/{neptun}")
     Student getOne(

@@ -35,3 +35,55 @@ content disposition: milyen néven töltsük le a fájlt
     ResponseEntity<Student> download2();
 ezzel tudunk manimulálni a dolgokat
 
+függőség kell az adatbéhjez -> h2 -> memóriában van minden adat
+kell még egy starter jpa
+
+.yml kiterjesztésben nem = hanem : kell
+|-> fa struktúrát lehet vele csinálni
+|-> listákat is lehet csinálni
+|-> jobb mint a properties
+
+ha mem-et írunkakkokr mem memóriabeli ha tárhelyre akkor egy eléri út kell
+
+adatb szerver konifig:
+
+server.port: 8081
+spring:
+  jackson.serialization.indent-output: true
+  datasource:
+    url: jdbc:h2:mem:testdb
+    driver-class-name: org.h2.Driver
+    username: sa
+    password: pw
+-------------------------------------
+jpa konfig: lelke a adatbkezelésének
+
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    show-sql: true
+    generate-ddl: true
+
+
+generate-ddl: csináljon ddl utsaításokat    
+
+adatb. konfig:
+
+  h2.console:
+    enabled: true
+    path: /db
+
+-----
+CrudRepository<Mi a perzisztencia típusa, mi a kulcs típusa>
+
+
+@ManyToOne mindig az adott táblából van értelmezve ( az összesnél)
+
+
+
+minél kevesebb repo legyen 1 osztályban
+
+
+
+
+
+

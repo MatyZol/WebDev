@@ -9,8 +9,6 @@ import java.time.OffsetDateTime;
 import java.util.*;
 import java.util.stream.Collectors;
 
-
-//CRUD művleteket tudja: ezek azok amik ebe az osztályba vannak
 @Slf4j
 @Repository
 public class StudentRepositoryImpl
@@ -52,8 +50,9 @@ public class StudentRepositoryImpl
     }
 
     @Override
-    public Student updateOne(@NonNull final Student student)
-    {
+    public Student updateOne(
+            @NonNull final Student student) {
+
         final var original = students.get(student.getNeptun());
         original.setName(student.getName());
         original.setProgram(student.getProgram());
@@ -64,6 +63,7 @@ public class StudentRepositoryImpl
     @Override
     public void deleteByNeptun(
             @NonNull final String neptun) {
-            students.remove(neptun);
+
+        students.remove(neptun);
     }
 }
