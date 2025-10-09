@@ -20,6 +20,6 @@ public class Application extends SpringBootServletInitializer {
     public static void main(String[] args) {
         SpringApplication.run(Application.class, args);
 
-        System.out.println(IntStream.range(0,6).mapToObj(String::valueOf).collect(Collectors.joining()));
+
     }
 }

@@ -1,23 +1,12 @@
 package hu.unideb.repository;
 
 import hu.unideb.model.Book;
-import org.springframework.stereotype.Repository;
+import org.springframework.data.repository.CrudRepository;
 
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
-@Repository
-public class BookRepository {
+public interface BookRepository extends CrudRepository<Book, String> {
 
-    public Map<String, Book> books;
 
-    BookRepository(){
-        books = new HashMap<>();
-    }
-
-    public List<Book> getAllBooks(){
-        return books.values().stream().toList();
-    }
-
+    List<Book> findAll();
 }
