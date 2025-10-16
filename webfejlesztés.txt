@@ -83,7 +83,38 @@ CrudRepository<Mi a perzisztencia típusa, mi a kulcs típusa>
 minél kevesebb repo legyen 1 osztályban
 
 
+----
 
+ha van egy webstormos projekt akkor abba installálni kell a függőségeket vagy felugró ablak vagy más...
+tamplate-be lehet betenni egy egész html scriptet
+angular könyvet érdemes olvasni,de el lehet végezni a tárgyat nélküle
+
+hallgatók kilistázása:
+egy osztály ami leírja hogy néz ki egy hallgató
+ha ugyan az osztály a két oldalon akkor azok matchelnek
+
+tulajdonság = mező = field
+láthatóság = public, protected, private , public az alap
+null = nem szeretnénk értéket adni
+undefined= ismeretlen érték
+a timescript paranoid = hozzá kell adni hogy amellett hogy string amellett lehet undefined, de ne ezt csináljuk
+*|-> nyomjuk el a hibaüzenetet ! -el
+
+Injectable -> servicekre ezt tesszük, bele akarjuk fecskendezni a projektbe
+|-> befecskendezhető http kliens
+
+Observable -> aszinkron http request
+
+
+WEBCONFIG:
+public static class WebConfiguration implements WebMvcConfigurer {
+        @Override
+        public void addCorsMappings(CorsRegistry registry) {
+           registry.addMapping("/**")
+                   .allowedOrigins("*")
+                   .allowedMethods("GET", "POST", "PUT", "DELETE");
+        }
+    }
 
 
 
