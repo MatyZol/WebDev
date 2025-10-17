@@ -1,0 +1,25 @@
+
+<table>
+  <thead>
+    <tr>
+      <th>ISBN</th>
+      <th>Title</th>
+      <th>Publisher</th>
+      <th>Price</th>
+    </tr>
+  </thead>
+  <tbody>
+        @for (book of books;track book.isbn){
+          <tr>
+            <td>{{book.isbn}}</td>
+            <td>{{book.title}}</td>
+            <td>{{book.publisher}}</td>
+            <td>{{book.price}}</td>
+          </tr>
+
+        }
+  </tbody>
+</table>
+
+
+

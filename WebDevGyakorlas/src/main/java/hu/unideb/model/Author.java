@@ -1,11 +1,11 @@
 package hu.unideb.model;
 
-import jakarta.persistence.Column;
+
 import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import jakarta.persistence.OrderColumn;
 import lombok.*;
-import org.springframework.core.annotation.Order;
 
 import java.time.OffsetDateTime;
 
@@ -14,14 +14,13 @@ import java.time.OffsetDateTime;
 @NoArgsConstructor
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
 @Builder
-@Entity(name = "BOOKS")
-
-public class Book {
+@Entity(name = "AUTHORS")
+public class Author {
     @Id
     @EqualsAndHashCode.Include
-    private String ISBN;
-    private String title;
-    private String publisher;
-    private int price;
+    private int authorID;
+    private String firstName;
+    private String lastName;
+    private OffsetDateTime dateOfBirth;
 
 }

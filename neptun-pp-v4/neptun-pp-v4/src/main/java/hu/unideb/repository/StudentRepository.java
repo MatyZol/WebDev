@@ -10,3 +10,4 @@ public interface StudentRepository
 
     List<Student> findAll();
 }
+
