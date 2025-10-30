@@ -1,50 +1,35 @@
 package hu.unideb.runner;
 
-import com.github.javafaker.Faker;
 import hu.unideb.model.Book;
 import hu.unideb.repository.BookRepository;
+import hu.unideb.util.BookUtils;
 import lombok.AllArgsConstructor;
-import lombok.extern.apachecommons.CommonsLog;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.CommandLineRunner;
+import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
 
-import java.time.OffsetDateTime;
-import java.util.Random;
-import java.util.stream.Collectors;
-import java.util.stream.IntStream;
-
-import static java.rmi.server.LogStream.log;
 @Component
 @AllArgsConstructor
+@Order(1)
 @Slf4j
 public class BookRunner implements CommandLineRunner {
 
 
     private final BookRepository bookRepository;
 
-    private static final Faker FAKER = new Faker();
-    private static final String ISBN = "ISBN";
-    private static final Random RANDOM = new Random();
+    private final BookUtils bookUtils = new BookUtils();
 
 
-
-    private String getISBN(){
-        return ISBN+" "+FAKER.code().isbn10(true);
-    }
-
-    private int getPrice(){
-        return RANDOM.nextInt(5,100);
-    }
 
     @Override
     public void run(String... args) throws Exception {
         for (int i = 0; i < 100; i++) {
             final var book = bookRepository.save(Book.builder()
-                    .ISBN(getISBN())
-                    .title(FAKER.book().title())
-                    .publisher(FAKER.book().publisher())
-                    .price(getPrice())
+                    .ISBN(bookUtils.getISBN())
+                    .title(BookUtils.FAKER.book().title())
+                    .publisher(BookUtils.FAKER.book().publisher())
+                    .price(bookUtils.getPrice())
                     .build());
             log.info(book.toString());
         }

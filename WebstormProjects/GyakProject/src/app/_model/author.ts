@@ -1,5 +1,5 @@
 export class Author {
-  authorId!:number;
+  authorID!:number;
   firstName!:string;
   lastName!:string;
   dateOfBirth!:string;

@@ -17,4 +17,8 @@ export class AuthorClient {
     return this.http.get<Author[]>(this.rootUrl);
   }
 
+
+  public delete(authorID:number):Observable<void>{
+    return this.http.delete<void>(`${this.rootUrl}/${authorID}`);
+  }
 }

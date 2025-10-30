@@ -6,12 +6,14 @@ import hu.unideb.repository.AuthorRepository;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.CommandLineRunner;
+import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
 
 import java.time.ZoneOffset;
 
 @Component
 @AllArgsConstructor
+@Order(1)
 @Slf4j
 public class AuthorRunner implements CommandLineRunner {
 
@@ -24,7 +26,7 @@ public class AuthorRunner implements CommandLineRunner {
     public void run(String... args) throws Exception {
         for  (int i = 0; i < 100; i++) {
             final var author = authorRepository.save(Author.builder()
-                    .authorID(i)
+                    .authorID(i+1)
                     .firstName(FAKER.name().firstName())
                     .lastName(FAKER.name().lastName())
                     .dateOfBirth(FAKER.date().birthday().toInstant().atOffset(ZoneOffset.UTC))

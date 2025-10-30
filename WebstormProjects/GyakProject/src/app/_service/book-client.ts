@@ -18,7 +18,11 @@ export class BookClient {
     return this.http.get<Book[]>(this.rootUrl);
   }
 
-  public getOne():Observable<Book>{
-    return this.http.get<Book>('http://localhost:8082/api/books/ISBN 1-87225-619-8');
+  public delete(isbn:string):Observable<void>{
+    return this.http.delete<void>(`${this.rootUrl}/${isbn}`)
+  }
+
+  public getOne(isbn:string):Observable<Book>{
+    return this.http.get<Book>(`${this.rootUrl}/${isbn}`);
   }
 }

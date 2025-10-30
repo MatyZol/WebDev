@@ -31,4 +31,14 @@ export class BookListComponent implements OnInit {
     )
   }
 
+  protected delete(isbn:string):void {
+    this.client.delete(isbn).subscribe(
+      response => {
+        this.ngOnInit()
+      }
+    )
+  }
+
+
+
 }

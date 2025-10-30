@@ -1,25 +1,47 @@
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <div class="card my-2">
+        <div class="card-header bg-primary text-white">
+          Books
+        </div>
+        <div class="card-body table-responsive p-0">
+          <table class="table table-striped table-hover">
+            <thead class="table-dark">
+            <tr>
+              <th>ISBN</th>
+              <th>Title</th>
+              <th>Publisher</th>
+              <th>Price</th>
+              <th>Actions</th>
+            </tr>
+            </thead>
+            <tbody>
+              @for (book of books;track book.isbn){
+                <tr>
+                  <td>{{book.isbn}}</td>
+                  <td>{{book.title}}</td>
+                  <td>{{book.publisher}}</td>
+                  <td>{{book.price}}</td>
+                  <td>
+                    <button class="btn btn-outline-danger" (click)="delete(book.isbn)">
+                      Törlés
+                    </button>
+                  </td>
+                </tr>
 
-<table>
-  <thead>
-    <tr>
-      <th>ISBN</th>
-      <th>Title</th>
-      <th>Publisher</th>
-      <th>Price</th>
-    </tr>
-  </thead>
-  <tbody>
-        @for (book of books;track book.isbn){
-          <tr>
-            <td>{{book.isbn}}</td>
-            <td>{{book.title}}</td>
-            <td>{{book.publisher}}</td>
-            <td>{{book.price}}</td>
-          </tr>
+              }
+            </tbody>
+          </table>
 
-        }
-  </tbody>
-</table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
 
 
 

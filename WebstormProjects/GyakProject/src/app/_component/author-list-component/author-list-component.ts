@@ -25,4 +25,10 @@ export class AuthorListComponent implements OnInit {
 
   }
 
+  protected delete(authorID:number):void{
+    this.client.delete(authorID).subscribe(response=> {
+      this.ngOnInit()
+    })
+  }
+
 }
