@@ -1,25 +1,47 @@
-<table>
-  <thead>
-  <tr>
-      <th>Neptun</th>
-      <th>Name</th>
-      <th>Program</th>
-      <th>Created</th>
-      <th>Updated</th>
-  </tr>
-  </thead>
-  <tbody>
-    @for (student of students; track student.neptun){
-        <tr>
-          <td>{{student.neptun}}</td>
-          <td>{{student.name}}</td>
-          <td>{{student.program}}</td>
-          <td>{{student.created | date:'yyyy/MM/dd HH:mm:ss'}}</td>
-          <td>{{student.updated | date:'yyyy/MM/dd HH:mm:ss'}}</td>
-        </tr>
-    }
-  </tbody>
-</table>
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <div class="card my-2">
+        <div class="card-header bg-primary text-white">
+          Students
+        </div>
+        <div class="card-body table-responsive p-0">
+          <table class="table table-striped table-hover">
+            <thead class="table-dark">
+            <tr>
+              <th>Neptun</th>
+              <th>Name</th>
+              <th>Program</th>
+              <th class="d-none d-sm-table-cell">Created</th>
+              <th>Updated</th>
+              <th>Actions</th>
+            </tr>
+            </thead>
+            <tbody>
+              @for (student of students; track student.neptun){
+                <tr [class.table-danger]="student.program == 'BI_BSC'">
+                  <td><code class="badge text-bg-dark">{{student.neptun}}</code></td>
+                  <td>{{student.name}}</td>
+                  <td>{{student.program}}</td>
+                  <td class="d-none d-sm-table-cell">{{student.created | date:'yyyy/MM/dd HH:mm:ss'}}</td>
+                  <td>{{student.updated | date:'yyyy/MM/dd HH:mm:ss'}}</td>
+                  <td>
+                    <button class="btn btn-sm btn-outline-danger" (click)="delete(student.neptun)" >
+                      Törlés
+                    </button>
+                  </td>
+                </tr>
+              }
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
 
 @for (student of students; track student.neptun){
   <pre>

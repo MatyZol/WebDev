@@ -1,0 +1,18 @@
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <div class="card my-2">
+        <div class="card-header text-bg-primary">
+          {{student.neptun ? 'Update' : 'Create'}}
+        </div>
+        <div class="card-body">
+          <div class="form-floating">
+            <input disabled class="form-control" id="neptun" [(ngModel)]="student.neptun">
+            <label for="neptun">Neptun kód</label>
+          </div>
+          {{student | json}}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -18,4 +18,12 @@ export class StudentClient {
     return this.http.get<Student[]>(this.rootUrl);
   }
 
+  public delete(neptun: string):Observable<void>{
+    return this.http.delete<void>(`${this.rootUrl}/${neptun}`);
+  }
+
+  get(neptun: string):Observable<Student> {
+    return this.http.get<Student>(`${this.rootUrl}/${neptun}`);
+  }
+
 }

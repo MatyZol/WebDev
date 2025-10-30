@@ -1,0 +1,28 @@
+<table>
+  <thead>
+  <tr>
+    <th>Neptun</th>
+    <th>Name</th>
+    <th>Program</th>
+    <th>Created</th>
+    <th>Updated</th>
+  </tr>
+  </thead>
+  <tbody>
+    @for (student of students; track student.neptun) {
+      <tr>
+        <td>{{ student.neptun }}</td>
+        <td>{{ student.name }}</td>
+        <td>{{ student.program }}</td>
+        <td>{{ student.created | date: 'yyyy/MM/dd HH:mm' }}</td>
+        <td>{{ student.updated | date: 'yyyy/MM/dd HH:mm' }}</td>
+      </tr>
+    }
+  </tbody>
+</table>
+
+@for (student of students; track student.neptun) {
+  <pre>
+{{ student | json }}
+  </pre>
+}

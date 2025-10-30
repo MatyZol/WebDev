@@ -116,5 +116,42 @@ public static class WebConfiguration implements WebMvcConfigurer {
         }
     }
 
+---------------------------
+
+Ha megnyitunk egy webstormos projektet
+akkor package.json -> jobb klikk -> run npm install -> interpreter beállítása -> aztán ujra a package.json jobb klikk -> install npm -> kész
+
+
+
+col -okkal csináljunk a responzív webdizájnt! jobb mint a flex meg a grid !! 
+
+mx = vízszintes margin
+my = függőleges margin
+mt = top margin
+mb = bottom margin
+ms = baloldali margin
+me = jobboldali margin
+
+[] valami input
+() valami output, mi értesülünk valamiről, feliratkozunk valamire
+|-> pl: <tr [class.table-danger]="student.program == 'BI_BSC'"> : Ha gazdinfós legyen piros 
+
+bg-... : háttérszín 
+text-[szín] : text színe
+
+d-...: display-bármi ami display
+
+^
+|- ez front end volt idáig
+
+bootstrap icons
+
+CRUD űveletek:
+
+
+
+
+
+
 
 

@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "neptun-pp-cs12": {
+    "neptun-pp-v5-ng": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -30,7 +30,6 @@
               }
             ],
             "styles": [
-              "./node_modules/bootstrap/dist/css/bootstrap.css",
               "src/styles.scss"
             ]
           },
@@ -62,10 +61,10 @@
           "builder": "@angular/build:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "neptun-pp-cs12:build:production"
+              "buildTarget": "neptun-pp-v5-ng:build:production"
             },
             "development": {
-              "buildTarget": "neptun-pp-cs12:build:development"
+              "buildTarget": "neptun-pp-v5-ng:build:development"
             }
           },
           "defaultConfiguration": "development"
