@@ -9,6 +9,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
+import java.time.OffsetDateTime;
 import java.util.Random;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
@@ -24,7 +25,7 @@ public class BookRunner implements CommandLineRunner {
 
     private static final Faker FAKER = new Faker();
     private static final String ISBN = "ISBN";
-
+    private static final Random RANDOM = new Random();
 
 
 
@@ -32,6 +33,9 @@ public class BookRunner implements CommandLineRunner {
         return ISBN+" "+FAKER.code().isbn10(true);
     }
 
+    private int getPrice(){
+        return RANDOM.nextInt(5,100);
+    }
 
     @Override
     public void run(String... args) throws Exception {
@@ -39,7 +43,8 @@ public class BookRunner implements CommandLineRunner {
             final var book = bookRepository.save(Book.builder()
                     .ISBN(getISBN())
                     .title(FAKER.book().title())
-                    .author(FAKER.book().author())
+                    .publisher(FAKER.book().publisher())
+                    .price(getPrice())
                     .build());
             log.info(book.toString());
         }

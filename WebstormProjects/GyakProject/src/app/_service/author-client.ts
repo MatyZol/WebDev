@@ -1,0 +1,20 @@
+import { Injectable } from '@angular/core';
+import {HttpClient} from '@angular/common/http';
+import {Observable} from 'rxjs';
+import {Author} from '../_model/author';
+
+@Injectable({
+  providedIn: 'root'
+})
+export class AuthorClient {
+
+  private readonly rootUrl: string = 'http://localhost:8082/api/authors';
+
+  constructor(private http: HttpClient) {
+  }
+
+  public findAll():Observable<Author[]>{
+    return this.http.get<Author[]>(this.rootUrl);
+  }
+
+}
