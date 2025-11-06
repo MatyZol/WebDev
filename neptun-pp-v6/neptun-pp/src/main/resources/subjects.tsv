@@ -1,0 +1,206 @@
+INBPM0101-21	Az informatika logikai alapjai	6	8	CS_BSC
+INBPM0102-17	Diszkrét matematika	6	9	CS_BSC
+INBPM0103-17	Számítógépes matematika és vizualizáció	6	5	CS_BSC
+INBPM0104-21	Bevezetés a programozásba	3	5	CS_BSC
+INBPM0105-21	Operációs rendszerek	6	15	CS_BSC
+INBPM0206-17	Adatszerkezetek és algoritmusok	6	18	CS_BSC
+INBPM0207-21	Kalkulus	6	6	CS_BSC
+INBPM0208-17	Adatbázisrendszerek	3	5	CS_BSC
+INBPM0209-17	Adatbázisrendszerek labor	3	18	CS_BSC
+INBPM0210-17	Hálózati architektúrák és protokollok	6	15	CS_BSC
+INBPM0211-21	Magas szintű programozási nyelvek 1	6	10	CS_BSC
+INBPM0313-17	Alkalmazott statisztika	6	17	CS_BSC
+INBPM0314-21	Az informatika számítástudományi alapjai	6	6	CS_BSC
+INBPM0315-21	Magas szintű programozási nyelvek 2	6	8	CS_BSC
+INBPM0316-17	Web technológiák	6	10	CS_BSC
+INBPM0417-21	Alkalmazott matematika	6	10	CS_BSC
+INBPM0418-21	A mesterséges intelligencia alapjai	6	14	CS_BSC
+INBPM0419-17	Informatikai biztonság alapjai	6	12	CS_BSC
+INBPM0420-21	Szoftverfejlesztés	6	12	CS_BSC
+INBPM0521-17	Szoftverfejlesztési módszertanok	3	12	CS_BSC
+INBPM0522-21	Webfejlesztés	6	15	CS_BSC
+INBPM0523-21	Szakdolgozat 1	5	13	CS_BSC
+INBPM0623-21	Szakdolgozat 2	15	17	CS_BSC
+INBPM9924-17	3D nyomtatás és modellezés	3	5	CS_BSC
+INBPM9925-17	Felhő számítástechnika	3	13	CS_BSC
+INBPM9926-17	Térinformatikai ismeretek	3	17	CS_BSC
+INBPM9927-17	Bioinformatika	3	6	CS_BSC
+INBPM9928-21	E-Sport	3	7	CS_BSC
+INBPM9929-17	Infokommunikációs rendszerek üzemeltetése	6	15	CS_BSC
+INBPM9930-17	Képfeldolgozás a gyakorlatban	3	17	CS_BSC
+INBPM9931-17	Magas szintű programozási nyelvek 3	3	15	CS_BSC
+INBPM9932-17	Bevezetés a 3D játékfejlesztésbe	3	7	CS_BSC
+INBPM9933-17	Fordítóprogramok	3	13	CS_BSC
+INBPM9934-17	Gépi tanulás a gyakorlatban	3	7	CS_BSC
+INBPM9935-17	Haladó adatbázis ismeretek	3	11	CS_BSC
+INBPM9936-17	NoSQL adatbázisok	3	10	CS_BSC
+INBPM9937-17	Mobil alkalmazásfejlesztés	3	8	CS_BSC
+INBPM9938-17	Statisztika számítógéppel	3	13	CS_BSC
+INBPM9939-17	Szoftvertesztelés	3	14	CS_BSC
+INBPM9940-17	Haladó adatbiztonság	3	11	CS_BSC
+INBPM9941-17	Haladó web-technológiák	3	16	CS_BSC
+INBPM9942-17	Szkriptnyelvek	3	13	CS_BSC
+INBPM9943-17	Az információ- és kódelmélet alapjai	3	18	CS_BSC
+INBPM9944-17	Grafikus rendszerek	3	7	CS_BSC
+INBPM9945-17	Java fejlesztés a gyakorlatban	3	15	CS_BSC
+INBPM9946-17	IT Szolgáltatások gyakorlati megvalósítása nagyvállalati környezetben	6	18	CS_BSC
+INBPM9947-17	Bevezetés a Természetes Nyelvű Szövegfeldolgozásba	3	13	CS_BSC
+INBPM9948-17	Vállalat irányítási rendszerek alkalmazása és fejlesztése Microsoft alapokon	3	12	CS_BSC
+INBPM9949-17	A virtuális valóság és alkalmazásai	3	17	CS_BSC
+INBPM9950-17	Etikus hackelés I.	3	17	CS_BSC
+INBPM9951-17	Blokklánc technológia	3	9	CS_BSC
+INBPM9952-17	Vállalat irányítási rendszerek emelt szintű fejlesztése Microsoft alapokon	3	5	CS_BSC
+INBPM9953-17	Data Engineering alapok	6	10	CS_BSC
+INBPM9954-17	Szoftverfejlesztés az NI nagyvállalati környezetében	3	16	CS_BSC
+INBPM9955-17	Bevezetés a megerősítéses tanulásba	3	10	CS_BSC
+INBPM9956-17	Felhő alapú infrastruktúra menedzselése	3	16	CS_BSC
+INBPM9957-17	Karriermenedzsment	3	7	CS_BSC
+INBPM9958-17	Bevezetés az AWS alapú felhő infrastruktúrába	3	12	CS_BSC
+INBPM9959-21	Hálózat- és rendszerbiztonság	3	14	CS_BSC
+INBPM9976-21	Matematikai programcsomagok	2	17	CS_BSC
+INBPM9984-17	Szoftverfejlesztés C# nyelven nagyvállalati környezetben	3	6	CS_BSC
+INBPM9985-17	Informatikai szakmai angol nyelv	5	14	CS_BSC
+INBPM9986-17	Matematikai versenyfeladatok	3	14	CS_BSC
+INBPM9987-17	Informatikai versenyfeladatok	3	18	CS_BSC
+INBPM9988-17	Algoritmikus gondolkodás	2	15	CS_BSC
+INBPM9990-17	SAP vállalat irányítási rendszer programozása (ABAP)	3	7	CS_BSC
+INBPM9997-21	Szakmai gyakorlat	12	7	CS_BSC
+INBPM9998-17	Máshol teljesített szakmai kredit	0	10	CS_BSC
+INBPM9999-17	Máshol teljesített kredit	0	5	CS_BSC
+INBGM0101-17	Számítástudomány alapjai	6	17	BI_BSC
+INBGM0102-17	Gazdasági matematika 1	6	13	BI_BSC
+INBGM0103-17	Bevezetés a menedzsmentbe	3	7	BI_BSC
+INBGM0104-17	A gazdasági jog alapjai	3	9	BI_BSC
+INBGM0105-17	Bevezetés a programozásba	3	13	BI_BSC
+INBGM0106-17	Operációs rendszerek és infrastrukturális alapok	6	10	BI_BSC
+INBGM0107-17	Adatkezelés, szerzői jog	3	12	BI_BSC
+INBGM0208-17	Gazdasági matematika 2	6	14	BI_BSC
+INBGM0209-17	Mikroökonómia	6	17	BI_BSC
+INBGM0210-17	Számvitel	6	12	BI_BSC
+INBGM0211-17	Adatszerkezetek és algoritmusok	6	5	BI_BSC
+INBGM0212-17	Programozás 1	6	7	BI_BSC
+INBGM0313-17	Statisztika 1	6	7	BI_BSC
+INBGM0314-17	Makroökonómia	6	11	BI_BSC
+INBGM0315-17	Pénzügyi alapok	6	8	BI_BSC
+INBGM0317-17	Programozás 2	6	14	BI_BSC
+INBGM0318-17	Adatbázisrendszerek	6	16	BI_BSC
+INBGM0416-21	Szervezeti magatartás	3	13	BI_BSC
+INBGM0419-17	Statisztika 2	6	12	BI_BSC
+INBGM0420-17	Numerikus matematika	6	11	BI_BSC
+INBGM0422-21	Információ- és tudásmenedzsment	6	13	BI_BSC
+INBGM0423-17	Adatmenedzsment	6	8	BI_BSC
+INBGM0424-17	Üzleti intelligencia a gyakorlatban	3	10	BI_BSC
+INBGM0525-17	Operációkutatás	3	12	BI_BSC
+INBGM0527-21	Kontrolling	3	17	BI_BSC
+INBGM0528-17	Adatkezelő programok fejlesztése	3	16	BI_BSC
+INBGM0529-17	Szoftverfejlesztés és tesztelés alapjai	6	15	BI_BSC
+INBGM0530-21	Az informatikai biztonság alapjai	6	15	BI_BSC
+INBGM0631-21	Szakdolgozat 1	6	14	BI_BSC
+INBGM0731-21	Szakdolgozat 2	9	16	BI_BSC
+INBGM9921-21	Marketing	3	5	BI_BSC
+INBGM9926-21	Világgazdasági és integrációs folyamatok	3	6	BI_BSC
+INBGM9932-17	Pénzügyi matematika	6	18	BI_BSC
+INBGM9933-17	SAP felhasználói alapok	3	9	BI_BSC
+INBGM9934-17	Haladó táblázatkezelési ismeretek	3	15	BI_BSC
+INBGM9935-17	Nagy mennyiségű adatfeldolgozás	6	5	BI_BSC
+INBGM9936-17	Adatvizualizáció	3	15	BI_BSC
+INBGM9937-17	Statisztika számítógéppel	3	11	BI_BSC
+INBGM9938-17	Vállalati pénzügyek	6	5	BI_BSC
+INBGM9939-17	Stratégiai menedzsment 	3	11	BI_BSC
+INBGM9940-17	SAP fejlesztői alapok	3	14	BI_BSC
+INBGM9941-17	Nemzetközi üzleti ismeretek	3	10	BI_BSC
+INBGM9942-17	Döntéstámogató rendszerek	3	13	BI_BSC
+INBGM9943-21	Haladó adatbiztonság	3	5	BI_BSC
+INBGM9944-17	Digitális marketing	3	16	BI_BSC
+INBGM9945-21	Bevezetés a mesterséges intelligenciába	6	6	BI_BSC
+INBGM9946-17	Értékteremtő folyamatok menedzsmentje	6	7	BI_BSC
+INBGM9947-17	Az információ- és kódelmélet alapjai	3	5	BI_BSC
+INBGM9948-17	Az agilis üzleti elemző szerepe és feladatai a szoftverfejlesztésben	3	17	BI_BSC
+INBGM9949-17	Bevezetés a Felhőtechnológiákba	3	10	BI_BSC
+INBGM9950-21	IT Szolgáltatások gyakorlati megvalósítása nagyvállalati környezetben	6	15	BI_BSC
+INBGM9951-17	Vállalat irányítási rendszerek alkalmazása és fejlesztése Microsoft alapokon	3	8	BI_BSC
+INBGM9952-17	Etikus hackelés I.	3	15	BI_BSC
+INBGM9953-17	Blokklánc technológia	3	17	BI_BSC
+INBGM9954-17	Vállalat irányítási rendszerek emelt szintű fejlesztése Microsoft alapokon	3	12	BI_BSC
+INBGM9955-17	Szoftverfejlesztés az NI nagyvállalati környezetében	3	12	BI_BSC
+INBGM9956-17	Bevezetés a Java programozásba	3	12	BI_BSC
+INBGM9957-17	Karriermenedzsment	3	9	BI_BSC
+INBGM9958-17	Bevezetés az AWS alapú felhő infrastruktúrába	3	6	BI_BSC
+INBGM9959-21	Hálózat- és rendszerbiztonság	3	7	BI_BSC
+INBGM9976-21	Matematikai programcsomagok	2	6	BI_BSC
+INBGM9985-17	Informatikai szakmai angol nyelv	5	14	BI_BSC
+INBGM9986-17	Matematikai versenyfeladatok	3	10	BI_BSC
+INBGM9987-17	Informatikai versenyfeladatok	3	7	BI_BSC
+INBGM9988-17	Algoritmikus gondolkodás	2	17	BI_BSC
+INBGM9997-21	Szakmai gyakorlat	12	11	BI_BSC
+INBGM9998-17	Máshol teljesített szakmai kredit	0	9	BI_BSC
+INBGM9999-17	Máshol teljesített kredit	0	16	BI_BSC
+INBMM0101-24	Algoritmusok és a programozás alapjai	3	18	CSE_BSC
+INBMM0102-24	Elektronika	6	18	CSE_BSC
+INBMM0104-24	Kalkulus	6	12	CSE_BSC
+INBMM0105-24	Matematika mérnököknek 1	6	11	CSE_BSC
+INBMM0106-24	A logika és a számítástudomány alapjai	6	8	CSE_BSC
+INBMM0120-24	Operációs rendszerek	3	18	CSE_BSC
+INBMM0203-24	Fizika	6	11	CSE_BSC
+INBMM0207-17	Adatszerkezetek és algoritmusok	6	8	CSE_BSC
+INBMM0208-24	Matematika mérnököknek 2	6	6	CSE_BSC
+INBMM0209-24	Digitális technika	6	13	CSE_BSC
+INBMM0211-21	Programozási nyelvek 1	6	11	CSE_BSC
+INBMM0313-17	Valószínűségszámítás és matematikai statisztika	6	7	CSE_BSC
+INBMM0314-17	Közgazdasági alapismeretek	6	10	CSE_BSC
+INBMM0315-17	Jelek és rendszerek	3	7	CSE_BSC
+INBMM0316-17	Mérnöki szoftverfejlesztés és prototípus tervezés grafikus paradigma mentén	3	14	CSE_BSC
+INBMM0317-21	Programozási nyelvek 2	6	16	CSE_BSC
+INBMM0318-17	Számítógépes hálózatok	6	15	CSE_BSC
+INBMM0412-21	Számítógép architektúrák	3	6	CSE_BSC
+INBMM0419-17	Adathálózati rendszerek menedzsmentje	3	16	CSE_BSC
+INBMM0421-24	Rendszerközeli programozás	3	8	CSE_BSC
+INBMM0422-21	Szabályozástechnika	3	9	CSE_BSC
+INBMM0424-17	Vállalati információs rendszerek 	3	18	CSE_BSC
+INBMM0425-17	Webes megoldások	3	18	CSE_BSC
+INBMM0433-21	Adatbázis-kezelés, tudásreprezentáció	6	16	CSE_BSC
+INBMM0434-24	IT biztonság	3	8	CSE_BSC
+INBMM0435-24	Számítógépes grafika	3	10	CSE_BSC
+INBMM0523-21	Szoftverfejlesztés mérnököknek	6	7	CSE_BSC
+INBMM0526-24	A mesterséges intelligencia alapjai	6	5	CSE_BSC
+INBMM0527-17	Assembly programozás	3	13	CSE_BSC
+INBMM0528-17	Beágyazott rendszerek	6	7	CSE_BSC
+INBMM0531-21	A gazdasági jog alapjai	3	13	CSE_BSC
+INBMM0630-21	Mobil megoldások	3	9	CSE_BSC
+INBMM0632-17	Menedzsment alapok mérnököknek	6	12	CSE_BSC
+INBMM0636-21	Szakdolgozat 1	6	8	CSE_BSC
+INBMM0736-21	Szakdolgozat 2	9	11	CSE_BSC
+INBMM9929-24	Informatikai rendszerek felépítése, modellezése, analízise, megvalósítása	2	17	CSE_BSC
+INBMM9937-17	Mikrokontrollerek	6	14	CSE_BSC
+INBMM9938-21	Hálózati eszközök programozása 1	6	7	CSE_BSC
+INBMM9939-17	Újrakonfigurálható áramkörök	6	8	CSE_BSC
+INBMM9940-17	Beágyazott rendszerek fejlesztése	6	5	CSE_BSC
+INBMM9941-21	Hálózati eszközök programozása 2	6	15	CSE_BSC
+INBMM9942-17	Hálózatok modellezése és hatékonyságvizsgálata	6	18	CSE_BSC
+INBMM9943-17	Távközlő hálózatok és technikák	6	15	CSE_BSC
+INBMM9944-17	Szenzor és aktuátor hálózatok	6	18	CSE_BSC
+INBMM9945-17	Szkriptnyelvek	3	13	CSE_BSC
+INBMM9946-17	Az információ- és kódelmélet alapjai	3	18	CSE_BSC
+INBMM9947-17	Bevezetés a Felhőtechnológiákba	3	15	CSE_BSC
+INBMM9948-21	Informatikai biztonság alapjai	3	7	CSE_BSC
+INBMM9949-21	IT Szolgáltatások gyakorlati megvalósítása nagyvállalati környezetben	6	18	CSE_BSC
+INBMM9950-17	Vállalat irányítási rendszerek alkalmazása és fejlesztése Microsoft alapokon	3	17	CSE_BSC
+INBMM9951-17	Bevezetés az önvezető autók fejlesztésébe	6	7	CSE_BSC
+INBMM9952-17	Etikus hackelés I.	3	11	CSE_BSC
+INBMM9953-17	Blokklánc technológia	3	17	CSE_BSC
+INBMM9954-17	Data Engineering alapok	6	10	CSE_BSC
+INBMM9955-17	Szoftverfejlesztés az NI nagyvállalati környezetében	3	17	CSE_BSC
+INBMM9956-17	Felhő alapú infrastruktúra menedzselése	3	11	CSE_BSC
+INBMM9957-17	Karriermenedzsment	3	12	CSE_BSC
+INBMM9958-17	Bevezetés az AWS alapú felhő infrastruktúrába	3	18	CSE_BSC
+INBMM9959-21	Hálózat- és rendszerbiztonság	3	11	CSE_BSC
+INBMM9976-21	Matematikai programcsomagok	2	6	CSE_BSC
+INBMM9984-17	Szoftverfejlesztés C# nyelven nagyvállalati környezetben	3	8	CSE_BSC
+INBMM9985-17	Informatikai szakmai angol nyelv	5	17	CSE_BSC
+INBMM9986-17	Matematikai versenyfeladatok	3	9	CSE_BSC
+INBMM9987-17	Informatikai versenyfeladatok	3	15	CSE_BSC
+INBMM9988-17	Algoritmikus gondolkodás	2	16	CSE_BSC
+INBMM9990-17	SAP vállalat irányítási rendszer programozása (ABAP)	3	17	CSE_BSC
+INBMM9997-21	Szakmai gyakorlat	12	9	CSE_BSC
+INBMM9998-17	Máshol teljesített szakmai kredit	0	5	CSE_BSC
+INBMM9999-17	Máshol teljesített kredit	0	13	CSE_BSC

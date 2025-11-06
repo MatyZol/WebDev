@@ -22,18 +22,26 @@
                 <tr [class.table-danger]="student.program == 'BI_BSC'">
                   <td><code class="badge text-bg-dark">{{student.neptun}}</code></td>
                   <td>{{student.name}}</td>
-                  <td>{{student.program}}</td>
+                  <td>{{neptunConfig.programs.get(student.program)}}</td>
                   <td class="d-none d-sm-table-cell">{{student.created | date:'yyyy/MM/dd HH:mm:ss'}}</td>
                   <td>{{student.updated | date:'yyyy/MM/dd HH:mm:ss'}}</td>
                   <td>
                     <button class="btn btn-sm btn-outline-danger" (click)="delete(student.neptun)" >
                       Törlés
                     </button>
+                    <a class="btn btn-sm btn-outline-primary" [routerLink]="student.neptun">
+                      Módosítás
+                    </a>
                   </td>
                 </tr>
               }
             </tbody>
           </table>
+        </div>
+        <div class="card-footer">
+          <a class="btn btn-outline-primary float-end" [routerLink]="'create'">
+            Új hallgató létrehozása
+          </a>
         </div>
       </div>
     </div>

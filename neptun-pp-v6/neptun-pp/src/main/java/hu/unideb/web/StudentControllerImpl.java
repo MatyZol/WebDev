@@ -11,7 +11,6 @@ import org.springframework.http.HttpHeaders;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.time.OffsetDateTime;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
@@ -49,15 +48,14 @@ public class StudentControllerImpl
             @NonNull Student student) {
 
         student.setNeptun(NeptunUtils.getNeptun());
-        return repository.save(student.withCreated(OffsetDateTime.now())
-                .toBuilder().updated(OffsetDateTime.now()).build());
+        return repository.save(student);
     }
 
     @Override
     public Student updateOne(
             @NonNull Student student) {
 
-        return repository.save(student.withUpdated(OffsetDateTime.now()));
+        return repository.save(student);
     }
 
     @Override

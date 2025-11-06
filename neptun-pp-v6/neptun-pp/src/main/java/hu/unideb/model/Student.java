@@ -12,8 +12,7 @@ import java.time.OffsetDateTime;
 @AllArgsConstructor
 @NoArgsConstructor
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
-@Builder(toBuilder = true) // arra jó hogy le tudjuk kérni a már megadott értékekkel
-@With // olyan mint egy settter, de nem változtatja az objecktumot hanem létre hoz egy másolatot a már meglévő értékekkel csak azzal nem amit átírunk
+@Builder
 @Entity(name = "STUDENTS")
 public class Student {
     @Id

@@ -26,4 +26,12 @@ export class StudentClient {
     return this.http.get<Student>(`${this.rootUrl}/${neptun}`);
   }
 
+  create(student: Student):Observable<Student>{
+    return this.http.post<Student>(this.rootUrl, student);
+  }
+
+  update(student: Student):Observable<Student>{
+    return this.http.put<Student>(this.rootUrl, student);
+  }
+
 }

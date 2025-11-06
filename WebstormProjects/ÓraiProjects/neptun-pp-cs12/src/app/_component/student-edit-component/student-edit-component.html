@@ -6,9 +6,52 @@
           {{student.neptun ? 'Update' : 'Create'}}
         </div>
         <div class="card-body">
-          <div class="form-floating">
-            <input disabled class="form-control" id="neptun" [(ngModel)]="student.neptun">
-            <label for="neptun">Neptun kód</label>
+
+          @if (student.neptun){
+            <div class="form-floating">
+              <input disabled class="form-control" id="neptun" [(ngModel)]="student.neptun">
+              <label for="neptun">Neptun kód</label>
+            </div>
+          } @else {
+            <div class="alert-info">
+              A neptun kódot a szerver határozza meg.
+            </div>
+          }
+
+
+          <div class="form-floating mt-2" >
+            <input class="form-control" id="name" [(ngModel)]="student.name">
+            <label for="name"> Nyomtatási név</label>
+          </div>
+
+          <div class="form-floating mt-2">
+            <select class="form-select" id="program" [(ngModel)]="student.program">
+              @for (program of neptunConfig.programs | keyvalue; track program.key)
+              {
+                <option [value]="program.key"> {{program.value}}</option>
+              }
+            </select>
+            <label for="program">Szak</label>
+          </div>
+          @if (student.updated) {
+            <div class="form-floating mt-2">
+              <input class="form-control" id="update" disabled [ngModel]="student.updated | date: neptunConfig.dateFormat">
+              <label for="update">Utolsó módosítás</label>
+            </div>
+
+          }
+
+          <div class="mt-2">
+            @if (!student.neptun){
+              <button class="btn btn-outline-primary w-100" (click)="create()">
+                Hallgató létrehozása
+              </button>
+            } @else {
+
+            <button class="btn btn-outline-primary w-100" (click)="update()">
+              Hallgató módosítása
+            </button>
+            }
           </div>
           {{student | json}}
         </div>
