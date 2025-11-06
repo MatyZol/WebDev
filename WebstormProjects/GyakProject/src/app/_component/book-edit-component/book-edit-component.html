@@ -30,20 +30,35 @@
             <label for="price">Price</label>
           </div>
 
-
           <div class="mt-2">
             @if (param=='create'){
-              <button class="btn btn-outline-primary w-100" (click)="create()">
+              <div class="form-floating mt-2">
+                <input class="form-control" id="firstName" [(ngModel)]="author.firstName">
+                <label for="firstName">First name</label>
+              </div>
+
+
+              <div class="form-floating mt-2">
+                <input class="form-control" id="lastName" [(ngModel)]="author.lastName">
+                <label for="lastName">Last name</label>
+              </div>
+
+              <div class="form-floating mt-2">
+                <input class="form-control" type="date" id="bithday" [(ngModel)]="author.dateOfBirth">
+                <label for="bithday">Date of birth</label>
+              </div>
+
+              <button class="btn btn-outline-primary mt-2 w-100" (click)="createBook();createAuthor()" >
                 Könyv létrehozása
               </button>
             } @else {
 
-              <button class="btn btn-outline-primary w-100" (click)="update()">
+              <button class="btn btn-outline-primary mt-2 w-100" (click)="update()">
                 Könyv modosítása
               </button>
             }
           </div>
-
+          {{author | json}}
           {{book | json}}
         </div>
       </div>

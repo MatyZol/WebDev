@@ -2,10 +2,13 @@ package hu.unideb.model;
 
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import lombok.*;
 
 import java.time.OffsetDateTime;
+import java.util.UUID;
 
 @Data
 @AllArgsConstructor
@@ -16,9 +19,10 @@ import java.time.OffsetDateTime;
 public class Author {
     @Id
     @EqualsAndHashCode.Include
-    private int authorID;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long authorID;
     private String firstName;
     private String lastName;
-    private OffsetDateTime dateOfBirth;
+    private String dateOfBirth;
 
 }

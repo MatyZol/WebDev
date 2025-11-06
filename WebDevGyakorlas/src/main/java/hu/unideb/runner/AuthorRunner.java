@@ -9,7 +9,10 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.time.ZoneOffset;
+import java.time.format.DateTimeFormatter;
 
 @Component
 @AllArgsConstructor
@@ -17,7 +20,7 @@ import java.time.ZoneOffset;
 @Slf4j
 public class AuthorRunner implements CommandLineRunner {
 
-
+    private static DateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
     private static final Faker FAKER = new Faker();
 
     private final AuthorRepository authorRepository;
@@ -26,10 +29,11 @@ public class AuthorRunner implements CommandLineRunner {
     public void run(String... args) throws Exception {
         for  (int i = 0; i < 100; i++) {
             final var author = authorRepository.save(Author.builder()
-                    .authorID(i+1)
+
                     .firstName(FAKER.name().firstName())
                     .lastName(FAKER.name().lastName())
-                    .dateOfBirth(FAKER.date().birthday().toInstant().atOffset(ZoneOffset.UTC))
+                    .dateOfBirth(formatter.format(FAKER.date().birthday()))
+                    //.dateOfBirth(FAKER.date().birthday().toInstant().atOffset(ZoneOffset.UTC))
                     .build()
             );
             log.info(author.toString());
