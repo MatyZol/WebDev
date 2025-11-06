@@ -42,5 +42,25 @@ export class BookEditComponent implements OnInit{
     })
   }
 
+  protected create(): void{
+    this.client.create(this.book).subscribe( {
+      next: book =>{
+        this.book = book;
+        alert("Könyv sikeresen létrehozva");
+      },error: err => {
+        alert(JSON.stringify(err.m))
+      }
+    })
+  }
 
+  protected update(): void {
+    this.client.update(this.book).subscribe({
+      next: book => {
+        this.book = book;
+        alert("Könyv sikeresen modosítva");
+      }, error: err => {
+        alert(JSON.stringify(err.m))
+      }
+    })
+  }
 }

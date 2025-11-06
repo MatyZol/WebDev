@@ -10,13 +10,13 @@ import java.util.List;
 public interface AuthorController {
 
 
-    @GetMapping("/api/authors")
+    @GetMapping("/api/author")
     List<Author> getAll();
 
-    @GetMapping("/api/authors/{authorID}")
+    @GetMapping("/api/author/{authorID}")
     Author getOne(@NonNull @PathVariable int authorID);
 
-    @DeleteMapping("/api/authors/{authorID}")
+    @DeleteMapping("/api/author/{authorID}")
     void deleteById(@NonNull @PathVariable int authorID);
 
     @PostMapping("/api/author")

@@ -8,7 +8,7 @@ import {Author} from '../_model/author';
 })
 export class AuthorClient {
 
-  private readonly rootUrl: string = 'http://localhost:8082/api/authors';
+  private readonly rootUrl: string = 'http://localhost:8082/api/author';
 
   constructor(private http: HttpClient) {
   }

@@ -9,13 +9,13 @@ import java.util.List;
 @RestController
 public interface BookController {
 
-    @GetMapping("/api/books")
+    @GetMapping("/api/book")
     List<Book> getAll();
 
-    @GetMapping("/api/books/{isbn}")
+    @GetMapping("/api/book/{isbn}")
     Book getBook(@NonNull @PathVariable String isbn);
 
-    @DeleteMapping("/api/books/{isbn}")
+    @DeleteMapping("/api/book/{isbn}")
     void deleteBookByIsbn(@NonNull @PathVariable String isbn);
 
 

@@ -14,6 +14,36 @@
             <input class="form-control" id="isbn" [(ngModel)]="book.isbn">
             <label for="isbn">ISBN</label>
           </div>
+
+          <div class="form-floating mt-2">
+            <input class="form-control" id="title" [(ngModel)]="book.title">
+            <label for="title">Title</label>
+          </div>
+
+          <div class="form-floating mt-2">
+            <input class="form-control" id="publisher" [(ngModel)]="book.publisher">
+            <label for="publisher">Publisher</label>
+          </div>
+
+          <div class="form-floating mt-2">
+            <input class="form-control" id="price" [(ngModel)]="book.price">
+            <label for="price">Price</label>
+          </div>
+
+
+          <div class="mt-2">
+            @if (param=='create'){
+              <button class="btn btn-outline-primary w-100" (click)="create()">
+                Könyv létrehozása
+              </button>
+            } @else {
+
+              <button class="btn btn-outline-primary w-100" (click)="update()">
+                Könyv modosítása
+              </button>
+            }
+          </div>
+
           {{book | json}}
         </div>
       </div>

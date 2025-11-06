@@ -49,7 +49,7 @@ export class StudentEditComponent implements OnInit {
     this.client.create(this.student).subscribe({
       next: student => {
         this.student = student;
-        alert("sikeres lértehpzás");
+        alert("sikeres létrehozás");
         this.router.navigate(['student',student.neptun]);
       }, error: error => {
         alert(JSON.stringify(error));

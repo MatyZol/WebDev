@@ -8,7 +8,7 @@ import {Book} from '../_model/book';
 })
 export class BookClient {
 
-  private readonly rootUrl: string = 'http://localhost:8082/api/books';
+  private readonly rootUrl: string = 'http://localhost:8082/api/book';
 
   constructor(private http: HttpClient) {
 
@@ -24,5 +24,13 @@ export class BookClient {
 
   public getOne(isbn:string):Observable<Book>{
     return this.http.get<Book>(`${this.rootUrl}/${isbn}`);
+  }
+
+  public create(book:Book):Observable<Book> {
+    return this.http.post<Book>(this.rootUrl, book);
+  }
+
+  public update(book:Book):Observable<Book> {
+    return this.http.put<Book>(this.rootUrl, book);
   }
 }
