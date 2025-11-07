@@ -13,5 +13,5 @@ export const routes: Routes = [
   {path:'books/:isbn',component:BookEditComponent},
   {path:'authors/:authorID',component:AuthorEditComponent},
   {path:'bookAuthor',component:BookAuthorEditComponent},
-  {path:'**',component:BookListComponent}
+  {path:'**',redirectTo:'books'}
 ];
