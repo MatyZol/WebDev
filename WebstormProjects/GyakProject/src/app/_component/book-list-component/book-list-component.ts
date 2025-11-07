@@ -3,11 +3,13 @@ import {BookClient} from '../../_service/book-client';
 import {Book} from '../../_model/book';
 import {JsonPipe} from '@angular/common';
 import {iterator} from 'rxjs/internal/symbol/iterator';
+import {RouterLink} from '@angular/router';
 
 @Component({
   selector: 'app-book-list-component',
   imports: [
-    JsonPipe
+    JsonPipe,
+    RouterLink
   ],
   templateUrl: './book-list-component.html',
   styleUrl: './book-list-component.scss'

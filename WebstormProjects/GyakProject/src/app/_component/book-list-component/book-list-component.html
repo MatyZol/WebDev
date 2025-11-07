@@ -24,9 +24,12 @@
                   <td>{{book.publisher}}</td>
                   <td>{{book.price}}</td>
                   <td>
-                    <button class="btn btn-outline-danger" (click)="delete(book.isbn)">
+                    <button class="btn btn-sm btn-outline-danger" (click)="delete(book.isbn)">
                       Törlés
                     </button>
+                    <a class="btn btn-sm btn-outline-primary ms-2" [routerLink]="book.isbn">
+                      Módosítás
+                    </a>
                   </td>
                 </tr>
 
@@ -34,6 +37,11 @@
             </tbody>
           </table>
 
+        </div>
+        <div class="card-footer">
+          <button class="btn btn-outline-primary float-end" [routerLink]="'create'">
+            Könyv hozzáadása
+          </button>
         </div>
       </div>
     </div>

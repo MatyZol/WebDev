@@ -2,11 +2,13 @@ import {Component, OnInit} from '@angular/core';
 import {AuthorClient} from '../../_service/author-client';
 import {Author} from '../../_model/author';
 import {JsonPipe} from '@angular/common';
+import {RouterLink} from '@angular/router';
 
 @Component({
   selector: 'app-author-list-component',
   imports: [
-    JsonPipe
+    JsonPipe,
+    RouterLink
   ],
   templateUrl: './author-list-component.html',
   styleUrl: './author-list-component.scss'

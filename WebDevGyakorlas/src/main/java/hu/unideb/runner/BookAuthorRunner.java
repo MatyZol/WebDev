@@ -10,10 +10,10 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
 
-//@Component
-//@AllArgsConstructor
-//@Order(2)
-//@Slf4j
+@Component
+@AllArgsConstructor
+@Order(2)
+@Slf4j
 public class BookAuthorRunner implements CommandLineRunner {
 
     private BookAuthorRepository bookAuthorRepository;

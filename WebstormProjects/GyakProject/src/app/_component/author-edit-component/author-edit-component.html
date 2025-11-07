@@ -1,0 +1,59 @@
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <div class="card my-2">
+        <div class="card-header" [class.text-bg-primary]="param!='create'" [class.text-bg-dark]="param == 'create'" >
+          @if (param=='create'){
+            Create
+          } @else {
+            Update
+          }
+        </div>
+        <div class="card-body ">
+          @if (param!='create'){
+            <div class="form-floating">
+              <input disabled class="form-control" placeholder="Szerző azonosító" id="authorId" [(ngModel)]="author.authorID">
+              <label for="authorId">Szerző azonosító</label>
+            </div>
+          }@else{
+            <div class="alert alert-info mt-2">
+              A szerző azonosítót a rendszer automatíkusan generálja! Megadása nem szükséges!
+            </div>
+          }
+
+          <div class="form-floating mt-2">
+            <input class="form-control" placeholder="Keresztnév"  id="firstName" [(ngModel)]="author.firstName">
+            <label for="firstName">Keresztnév</label>
+          </div>
+
+          <div class="form-floating mt-2">
+            <input class="form-control" placeholder="Vezetéknév" id="lastName" [(ngModel)]="author.lastName">
+            <label for="lastName">Vezetéknév</label>
+          </div>
+
+          <div class="form-floating mt-2">
+            <input class="form-control" type="date" placeholder="Születési Dátum" id="birhtday" [(ngModel)]="author.dateOfBirth">
+            <label for="birhtday">Születési Dátum</label>
+          </div>
+
+          <div class="mt-2">
+            @if (param=='create'){
+              <button class="btn btn-outline-primary mt-2 w-100" (click)="createAuthor()" >
+                Szerző létrehozása
+              </button>
+
+            }@else{
+
+              <button class="btn btn-outline-primary mt-2 w-100" (click)="update()">
+                Szerző modosítása
+              </button>
+            }
+          </div>
+
+          {{author | json}}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

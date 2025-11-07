@@ -26,9 +26,12 @@
                   <td>{{author.lastName}}</td>
                   <td>{{author.dateOfBirth}}</td>
                   <td>
-                    <button class="btn btn-outline-danger" (click)="delete(author.authorID)">
+                    <button class="btn btn-sm btn-outline-danger" (click)="delete(author.authorID)">
                       Törlés
                     </button>
+                    <a class="btn btn-sm btn-outline-primary ms-2" [routerLink]="author.authorID.toString()">
+                      Módosítás
+                    </a>
                   </td>
                 </tr>
 
@@ -37,6 +40,10 @@
           </table>
 
         </div>
+        <div class="card-footer">
+          <button class="btn btn-outline-primary float-end" [routerLink]="'create'">
+            Szerző hozzáadása
+          </button>
       </div>
     </div>
   </div>

@@ -14,10 +14,10 @@ public interface AuthorController {
     List<Author> getAll();
 
     @GetMapping("/api/author/{authorID}")
-    Author getOne(@NonNull @PathVariable int authorID);
+    Author getOne(@NonNull @PathVariable Long authorID);
 
     @DeleteMapping("/api/author/{authorID}")
-    void deleteById(@NonNull @PathVariable int authorID);
+    void deleteById(@NonNull @PathVariable Long authorID);
 
     @PostMapping("/api/author")
     Author createAuthor(@NonNull @RequestBody Author author);

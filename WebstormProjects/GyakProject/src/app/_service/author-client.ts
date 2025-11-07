@@ -24,6 +24,10 @@ export class AuthorClient {
   }
 
 
+  public getOne(authorID:number):Observable<Author>{
+    return this.http.get<Author>(`${this.rootUrl}/${authorID}`);
+  }
+
   public create(author:Author):Observable<Author> {
     return this.http.post<Author>(this.rootUrl, author);
   }

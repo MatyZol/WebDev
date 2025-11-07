@@ -23,13 +23,13 @@ public class AuthorControllerImpl implements AuthorController {
     }
 
     @Override
-    public Author getOne(@NonNull int authorID) {
-        return authorRepository.findById(String.valueOf(authorID)).orElseThrow(IllegalArgumentException::new);
+    public Author getOne(@NonNull Long authorID) {
+        return authorRepository.findById(authorID).orElseThrow(IllegalArgumentException::new);
     }
 
     @Override
-    public void deleteById(@NonNull int authorID) {
-        authorRepository.deleteById(String.valueOf(authorID));
+    public void deleteById(@NonNull Long authorID) {
+        authorRepository.deleteById(authorID);
     }
 
     @Override

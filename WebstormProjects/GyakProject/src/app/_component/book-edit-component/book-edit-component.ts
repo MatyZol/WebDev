@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {Book} from '../../_model/book';
 import {BookClient} from '../../_service/book-client';
-import {ActivatedRoute, convertToParamMap} from '@angular/router';
+import {ActivatedRoute, convertToParamMap, Router} from '@angular/router';
 import {FormsModule} from '@angular/forms';
 import {DatePipe, JsonPipe} from '@angular/common';
 import {Author} from '../../_model/author';
@@ -25,8 +25,8 @@ export class BookEditComponent implements OnInit{
   protected param!: string | null;
   constructor(
     private bookClient:BookClient,
-    private authorClient:AuthorClient,
-    private route:ActivatedRoute
+    private route:ActivatedRoute,
+    private router:Router
   ) {
   }
 
@@ -37,7 +37,6 @@ export class BookEditComponent implements OnInit{
       this.param=params.get('isbn');
       if(params.get('isbn') == 'create'){
         this.book = {} as Book;
-        this.author = {} as Author;
       }
       else {
         this.bookClient.getOne(params.get('isbn')!).subscribe(book => {
@@ -52,23 +51,14 @@ export class BookEditComponent implements OnInit{
       next: book =>{
         this.book = book;
         alert("Könyv sikeresen létrehozva");
+        this.router.navigate(['books',book.isbn]);
       },error: err => {
         alert(JSON.stringify(err))
       }
     })
   }
 
-  protected createAuthor(): void {
-    this.authorClient.create(this.author).subscribe( {
-      next:author =>{
 
-        this.author = author;
-        alert("Szerző sikeresen létrehozva");
-      },error: err => {
-        alert(JSON.stringify(err))
-      }
-    })
-  }
 
   protected update(): void {
     this.bookClient.update(this.book).subscribe({
