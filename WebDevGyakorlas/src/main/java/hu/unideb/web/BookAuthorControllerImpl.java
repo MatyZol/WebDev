@@ -10,17 +10,17 @@ import lombok.NonNull;
 import org.springframework.web.bind.annotation.RestController;
 
 
-@AllArgsConstructor
-@RestController
-public class BookAuthorControllerImpl implements BookAuthorController {
+//@AllArgsConstructor
+//@RestController
+public class BookAuthorControllerImpl /*implements BookAuthorController*/ {
 
-    private BookAuthorRepository bookAuthorRepository;
-    private BookRepository bookRepository;
-    private AuthorRepository authorRepository;
-
-    @Override
-    public BookAuthor createBookAuthor(@NonNull BookAuthor bookAuthor) {
-
-        return bookAuthorRepository.save(bookAuthor);
-    }
+//    private BookAuthorRepository bookAuthorRepository;
+//    private BookRepository bookRepository;
+//    private AuthorRepository authorRepository;
+//
+//    @Override
+//    public BookAuthor createBookAuthor(@NonNull BookAuthor bookAuthor) {
+//
+//        return bookAuthorRepository.save(bookAuthor);
+//    }
 }

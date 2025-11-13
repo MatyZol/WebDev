@@ -9,8 +9,8 @@ import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
 
-public interface BookAuthorRepository extends CrudRepository<BookAuthor, UUID> {
-    List<BookAuthor> findAll();
+public interface BookAuthorRepository/* extends CrudRepository<BookAuthor, UUID> */{
+    //List<BookAuthor> findAll();
 
 
 }
