@@ -58,4 +58,30 @@
       </div>
     </div>
   </div>
+  <!-- Button trigger modal -->
+  <button #openModal type="button" class="d-none" data-bs-toggle="modal" data-bs-target="#exampleModal">
+    Launch demo modal
+  </button>
+
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content bg-success-subtle">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Sikeres mentés</h1>
+
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p>
+            Sikeresen megtörtént a hallgató modosítása!
+          </p>
+        </div>
+        <div class="modal-footer">
+          <button #closeModal type="button" class="btn btn-success w-100" data-bs-dismiss="modal">Close</button>
+
+        </div>
+      </div>
+    </div>
+  </div>
 </div>

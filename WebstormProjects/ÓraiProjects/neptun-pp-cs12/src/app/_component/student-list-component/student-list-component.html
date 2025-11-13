@@ -2,11 +2,14 @@
   <div class="row">
     <div class="col-12">
       <div class="card my-2">
-        <div class="card-header bg-primary text-white">
-          Students
+        <div class="card-header bg-primary text-white d-flex flex-row align-items-center">
+          <div class="flex-grow-1">
+           <i class="bi bi-people-fill me-1"></i> Students
+          </div>
+          <input class="form-control form-control-sm" placeholder="Keresés..." [style.width.ch]="30" [(ngModel)]="searchTerm">
         </div>
         <div class="card-body table-responsive p-0">
-          <table class="table table-striped table-hover">
+          <table class="table table-striped table-hover m-0">
             <thead class="table-dark">
             <tr>
               <th>Neptun</th>
@@ -18,7 +21,9 @@
             </tr>
             </thead>
             <tbody>
-              @for (student of students; track student.neptun){
+              @for (student of students | student: searchTerm; track student.neptun){
+<!--                @if (!searchTerm || student.name.toLowerCase().includes(searchTerm.toLowerCase())){-->
+
                 <tr [class.table-danger]="student.program == 'BI_BSC'">
                   <td><code class="badge text-bg-dark">{{student.neptun}}</code></td>
                   <td>{{student.name}}</td>
@@ -34,6 +39,12 @@
                     </a>
                   </td>
                 </tr>
+                } @empty { <!--forhoz kapcsolódik, olyan mint az ifhes az else maybe, a pipe atlakító függvények -->
+
+                  <tr empty [colSpan]="6" [entity]="'hallgató'">
+
+                  </tr>
+
               }
             </tbody>
           </table>
@@ -51,10 +62,10 @@
 
 
 
-@for (student of students; track student.neptun){
-  <pre>
-    {{ student | json }}
-  </pre>
+<!--@for (student of students; track student.neptun){-->
+<!--  <pre>-->
+<!--    {{ student | json }}-->
+<!--  </pre>-->
 
 
-}
+<!--}-->

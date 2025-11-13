@@ -1,8 +1,8 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
 import {StudentClient} from '../../_service/student-client';
 import {ActivatedRoute, Router} from '@angular/router';
 import {Student} from '../../_model/student';
-import {Observable} from 'rxjs';
+import {delay, Observable, tap} from 'rxjs';
 import {FormsModule} from '@angular/forms';
 import {DatePipe, JsonPipe, KeyValuePipe} from '@angular/common';
 import {neptunConfig} from '../../appconstans';
@@ -22,6 +22,14 @@ import {neptunConfig} from '../../appconstans';
 export class StudentEditComponent implements OnInit {
 
   protected student!: Student;
+
+
+  @ViewChild('openModal') // ezzel tudjuk megadni hogy mire pontosan (id)
+  protected openModal!:ElementRef; // ilyen típusokkal tudunk __UI elemeketre givatkozin
+
+  @ViewChild('closeModal') // ezzel tudjuk megadni hogy mire pontosan (id)
+  protected closeModal!:ElementRef; // ilyen típusokkal tudunk __UI elemeketre givatkozin
+
 
   constructor(
     private client: StudentClient,
@@ -59,15 +67,15 @@ export class StudentEditComponent implements OnInit {
   }
 
   protected update(): void {
-    this.client.update(this.student).subscribe({
-      next: student => {
-        this.student = student;
-        alert("sikeres módosítás");
-      }, error: error => {
-        alert(JSON.stringify(error));
-      }
-
-    })
+    this.client
+      .update(this.student)
+      .pipe(
+        tap(student => this.student = student),
+        tap(()=>this.openModal.nativeElement.click()),
+        delay(5000),
+        tap(()=>this.closeModal.nativeElement.click()),
+      )
+      .subscribe();
   }
 
   protected readonly neptunConfig = neptunConfig;

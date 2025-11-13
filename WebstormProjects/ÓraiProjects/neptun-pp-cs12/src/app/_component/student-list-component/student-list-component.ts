@@ -5,13 +5,19 @@ import {Student} from '../../_model/student';
 import {DatePipe, JsonPipe} from '@angular/common';
 import {neptunConfig} from '../../appconstans';
 import {RouterLink} from '@angular/router';
+import {FormsModule} from '@angular/forms';
+import {StudentPipe} from '../../_pipe/student-pipe';
+import {EmptyRow} from '../empty-row/empty-row';
 
 @Component({
   selector: 'app-student-list-component',
   imports: [
     JsonPipe,
     DatePipe,
-    RouterLink
+    RouterLink,
+    FormsModule,
+    StudentPipe,
+    EmptyRow
   ],
   templateUrl: './student-list-component.html',
   styleUrl: './student-list-component.scss'
@@ -19,6 +25,8 @@ import {RouterLink} from '@angular/router';
 export class StudentListComponent implements OnInit {
 
   protected students!: Student[];
+  protected searchTerm!: string;
+
 
   constructor(private client: StudentClient) {
   }
