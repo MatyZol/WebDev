@@ -1,7 +1,8 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
-import {BookAuthor} from '../_model/book-author';
+
 import {Observable} from 'rxjs';
+import {Book} from '../_model/book';
 
 @Injectable({
   providedIn: 'root'
@@ -15,8 +16,8 @@ export class BookAuthorClient {
 
   }
 
-  public create(bookAuthor:BookAuthor):Observable<BookAuthor>{
-    return this.http.post<BookAuthor>(this.rootUrl, bookAuthor);
+  public connect(book:Book):Observable<Book>{
+    return this.http.post<Book>(this.rootUrl, book);
   }
 
 

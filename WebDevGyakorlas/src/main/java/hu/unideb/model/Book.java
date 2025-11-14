@@ -26,24 +26,27 @@ public class Book {
     private String publisher;
     private int price;
 
+    @ManyToOne
+    @JoinColumn(name = "author_id")
+    private Author author;
 
-    @ManyToMany(
-            cascade = {CascadeType.PERSIST, CascadeType.MERGE},
-            fetch = FetchType.LAZY
-    )
-    @JoinTable(
-            name = "BOOKS_AUTHORS",
-            joinColumns = @JoinColumn(name = "book_isbn"),
-            inverseJoinColumns = @JoinColumn(name = "author_id")
-    )
-    @Builder.Default
-    @JsonManagedReference
-    @ToString.Exclude
-    private Set<Author> authors = new HashSet<>();
 
-    public void addAuthor(Author author) {
-        authors.add(author);
-        author.getBooks().add(this);
-    }
+//    @ManyToMany(
+//            cascade = {CascadeType.PERSIST, CascadeType.MERGE},
+//            fetch = FetchType.LAZY
+//    )
+//    @JoinTable(
+//            name = "BOOKS_AUTHORS",
+//            joinColumns = @JoinColumn(name = "book_isbn"),
+//            inverseJoinColumns = @JoinColumn(name = "author_id")
+//    )
+//    @Builder.Default
+//    @ToString.Exclude
+//    private Set<Author> authors = new HashSet<>();
+//
+//    public void addAuthor(Author author) {
+//        authors.add(author);
+//        author.getBooks().add(this);
+//    }
 
 }

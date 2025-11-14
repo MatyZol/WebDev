@@ -6,6 +6,7 @@ import {Author} from '../../_model/author';
 import {Book} from '../../_model/book';
 import {ActivatedRoute, Router} from '@angular/router';
 
+
 @Component({
   selector: 'app-author-edit-component',
     imports: [
@@ -14,6 +15,7 @@ import {ActivatedRoute, Router} from '@angular/router';
     ],
   templateUrl: './author-edit-component.html',
   styleUrl: './author-edit-component.scss'
+
 })
 export class AuthorEditComponent implements OnInit {
 

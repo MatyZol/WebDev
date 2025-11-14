@@ -3,22 +3,16 @@ package hu.unideb.runner;
 import com.github.javafaker.Faker;
 import hu.unideb.model.Author;
 import hu.unideb.model.Book;
-import hu.unideb.model.BookAuthor;
 import hu.unideb.repository.AuthorRepository;
-import hu.unideb.repository.BookAuthorRepository;
 import hu.unideb.repository.BookRepository;
 import hu.unideb.util.BookUtils;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.CommandLineRunner;
-import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
-
-
-import static hu.unideb.util.BookUtils.FAKER;
 
 @Component
 @AllArgsConstructor
@@ -53,7 +47,8 @@ public class BookAuthorRunner implements CommandLineRunner {
                     .price(bookUtils.getPrice())
                     .build();
 
-        book.addAuthor(author);
+        author.addBook(book);
+        authorRepository.save(author);
         bookRepository.save(book);
 
         }

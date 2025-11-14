@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {Book} from '../../_model/book';
 import {Author} from '../../_model/author';
-import {BookAuthor} from '../../_model/book-author';
+
 import {BookClient} from '../../_service/book-client';
 import {AuthorClient} from '../../_service/author-client';
 import {FormsModule} from '@angular/forms';
@@ -22,15 +22,17 @@ export class BookAuthorEditComponent implements OnInit {
 
   books!:Book[];
   authors!:Author[];
-  bookAuthor!:BookAuthor;
+  book!:Book;
 
+  selectedAuthor!: Author;
   constructor(private bookClient : BookClient,
               private authorClient : AuthorClient,
               private bookAuthorClient : BookAuthorClient) {
   }
 
   ngOnInit(): void {
-    this.bookAuthor= {} as BookAuthor;
+
+    this.book = {} as Book;
 
     this.bookClient.findAll().subscribe({
       next: response =>
@@ -44,10 +46,11 @@ export class BookAuthorEditComponent implements OnInit {
 
   }
 
-  createBookAuthor():void{
-    this.bookAuthorClient.create(this.bookAuthor).subscribe({
-      next: bookAuthor => {
-        this.bookAuthor = bookAuthor;
+  connectBookAuthor():void{
+    this.book.author = this.selectedAuthor;
+    this.bookAuthorClient.connect(this.book).subscribe({
+      next: book => {
+        this.book = book;
         alert("Sikeres")
       },error: error => {
         alert(JSON.stringify(error))

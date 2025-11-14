@@ -1,5 +1,3 @@
-
-
 <div class="container">
   <div class="row">
     <div class="col-12">
@@ -19,12 +17,14 @@
             </tr>
             </thead>
             <tbody>
-              @for (author of authors;track author.authorID){
+              @for (author of authors; track author.authorID) {
                 <tr>
-                  <td>{{author.authorID}}</td>
-                  <td>{{author.firstName}}</td>
-                  <td>{{author.lastName}}</td>
-                  <td>{{author.dateOfBirth}}</td>
+                  <td>{{ author.authorID }}</td>
+                  <td>{{ author.firstName }}</td>
+                  <td>{{ author.lastName }}</td>
+                  <td>{{ author.dateOfBirth }}</td>
+
+
                   <td>
                     <button class="btn btn-sm btn-outline-danger" (click)="delete(author.authorID)">
                       Törlés
@@ -44,10 +44,29 @@
           <button class="btn btn-outline-primary float-end" [routerLink]="'create'">
             Szerző hozzáadása
           </button>
+        </div>
       </div>
     </div>
   </div>
+
+    <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="exampleModalLabel">
+      <div class="modal-dialog">
+        <div class="modal-content bg-danger-subtle">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Szerző nem törölhető!</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            A szerző nem törölhető, mert könyv(ek) tartoznak hozzá!
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" (click)="closeModal()">Bezárás</button>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
 </div>
-
-
-

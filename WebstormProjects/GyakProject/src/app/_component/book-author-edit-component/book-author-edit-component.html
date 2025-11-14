@@ -4,11 +4,11 @@
       <div class="card my-2">
         <div class="card-header text-bg-primary">
 
-            Könyv és szerző össszekapcsolása
+            Könyv és szerző kapcsolatkezelés
         </div>
         <div class="card-body ">
           <div class="form-floating">
-            <select class="form-select" id="isbn" [(ngModel)]="bookAuthor.book">
+            <select class="form-select" id="isbn" [(ngModel)]="book">
               @for (book of books ; track book.isbn)
               {
                 <option [ngValue]="book"> {{book.title}}</option>
@@ -17,7 +17,7 @@
             <label for="isbn">Cím</label>
           </div>
           <div class="form-floating mt-2">
-            <select class="form-select" id="authorId" [(ngModel)]="bookAuthor.author">
+            <select class="form-select" id="authorId" [(ngModel)]="selectedAuthor">
               @for (author of authors ; track author.authorID)
               {
                 <option [ngValue]="author"> {{author.firstName+" "+author.lastName}}</option>
@@ -26,11 +26,11 @@
             <label for="authorId">Szerző</label>
           </div>
           <div class="mt-2">
-            <button class="btn btn-outline-primary mt-2 w-100" (click)="createBookAuthor()"> Könyv és a szerző összekapcsolása</button>
+            <button class="btn btn-outline-primary mt-2 w-100" (click)="connectBookAuthor()"> Könyv-szerző kapcsolat létrehozása/módosítása</button>
           </div>
         </div>
 
-          {{bookAuthor | json }}
+          {{book | json }}
 
 
       </div>

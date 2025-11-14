@@ -18,6 +18,8 @@ public interface BookController {
     @DeleteMapping("/api/book/{isbn}")
     void deleteBookByIsbn(@NonNull @PathVariable String isbn);
 
+    @PostMapping("api/bookAuthor")
+    Book connectBook(@NonNull @RequestBody Book book);
 
     @PostMapping("/api/book")
     Book createBook(@NonNull @RequestBody Book book);
