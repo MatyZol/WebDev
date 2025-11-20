@@ -148,6 +148,13 @@ bootstrap icons
 
 CRUD űveletek:
 
+Manuálisan hogyan buildeljük össze az Angulart és a Java-t:
+
+ki kell szedni a localhost8081 -> json proxy -> angular.json -> servenél meg kell adni a proxy-t
+
+terminálba: ng build --configuration=production --base-href=http://localhost:8081
+
+-> dist mappába -> media mappáta java backend-re a static mappába -> restart
 
 
 

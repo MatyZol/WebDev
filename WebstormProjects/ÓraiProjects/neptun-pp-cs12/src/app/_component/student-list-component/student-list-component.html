@@ -12,16 +12,30 @@
           <table class="table table-striped table-hover m-0">
             <thead class="table-dark">
             <tr>
-              <th>Neptun</th>
-              <th>Name</th>
-              <th>Program</th>
+              <th (click)="order('neptun')" [style.cursor]="'pointer'">
+                Neptun
+                @if (orderBy=="neptun"){
+                  <i class="bi float-end" [class.bi-sort-down-alt]="!desc" [class.bi-sort-down]="desc"></i>
+                }
+
+              </th>
+              <th sortable [value]="'name'"
+                  [orderBy]="orderBy"
+                  [desc]="desc"
+                  [order]="order">
+                Name
+              </th>
+              <th sortable-v2 [value]="'program'"
+              [(orderBy)]="orderBy" [(desc)]="desc"> <!-- ha betartjuk a szintaxot akkor az angular tudja ahogy 2 utas a kötés -->
+                Program
+              </th>
               <th class="d-none d-sm-table-cell">Created</th>
               <th>Updated</th>
               <th>Actions</th>
             </tr>
             </thead>
             <tbody>
-              @for (student of students | student: searchTerm; track student.neptun){
+              @for (student of students | student: searchTerm:orderBy:desc; track student.neptun){
 <!--                @if (!searchTerm || student.name.toLowerCase().includes(searchTerm.toLowerCase())){-->
 
                 <tr [class.table-danger]="student.program == 'BI_BSC'">

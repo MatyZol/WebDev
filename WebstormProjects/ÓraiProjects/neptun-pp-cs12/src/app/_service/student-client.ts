@@ -7,7 +7,7 @@ import {Student} from '../_model/student';
   providedIn: 'root'
 })
 export class StudentClient {
-  private readonly rootUrl:string = 'http://localhost:8081/api/student';
+  private readonly rootUrl:string = '/api/student';
 
   constructor(
     private http: HttpClient

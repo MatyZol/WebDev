@@ -69,6 +69,7 @@
               "buildTarget": "neptun-pp-cs12:build:production"
             },
             "development": {
+              "proxyConfig": "proxy.conf.json",
               "buildTarget": "neptun-pp-cs12:build:development"
             }
           },

@@ -8,16 +8,19 @@ import {RouterLink} from '@angular/router';
 import {FormsModule} from '@angular/forms';
 import {StudentPipe} from '../../_pipe/student-pipe';
 import {EmptyRow} from '../empty-row/empty-row';
+import {SortableTh} from '../sortable-th/sortable-th';
+import {SortableThV2} from '../sortable-th-v2/sortable-th-v2';
 
 @Component({
   selector: 'app-student-list-component',
   imports: [
-    JsonPipe,
     DatePipe,
     RouterLink,
     FormsModule,
     StudentPipe,
-    EmptyRow
+    EmptyRow,
+    SortableTh,
+    SortableThV2
   ],
   templateUrl: './student-list-component.html',
   styleUrl: './student-list-component.scss'
@@ -26,6 +29,8 @@ export class StudentListComponent implements OnInit {
 
   protected students!: Student[];
   protected searchTerm!: string;
+  protected orderBy!: keyof Student;
+  protected desc!:boolean;
 
 
   constructor(private client: StudentClient) {
@@ -39,6 +44,16 @@ export class StudentListComponent implements OnInit {
         }
       }
     )
+  }
+
+  protected order =
+    (value: keyof Student):void => {
+    if (value==this.orderBy){
+      this.desc = !this.desc;
+    }else{
+      this.desc = false;
+      this.orderBy = value
+    }
   }
 
   protected delete(neptun: string):void {
