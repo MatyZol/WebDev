@@ -4,12 +4,18 @@ import {Book} from '../../_model/book';
 import {JsonPipe} from '@angular/common';
 import {iterator} from 'rxjs/internal/symbol/iterator';
 import {RouterLink} from '@angular/router';
+import {FormsModule} from '@angular/forms';
+import {BookPipe} from '../../_pipe/book-pipe';
+import {EmptyRow} from '../empty-row/empty-row';
 
 @Component({
   selector: 'app-book-list-component',
   imports: [
-    JsonPipe,
-    RouterLink
+
+    RouterLink,
+    FormsModule,
+    BookPipe,
+    EmptyRow
   ],
   templateUrl: './book-list-component.html',
   styleUrl: './book-list-component.scss'
@@ -17,6 +23,7 @@ import {RouterLink} from '@angular/router';
 export class BookListComponent implements OnInit {
 
   protected books!: Book[];
+  protected searchTerm!: string;
 
   constructor(private client:BookClient) {
   }

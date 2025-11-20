@@ -4,6 +4,9 @@ import {Author} from '../../_model/author';
 import {JsonPipe, NgIf} from '@angular/common';
 import {RouterLink} from '@angular/router';
 import {Book} from '../../_model/book';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {AuthorPipe} from '../../_pipe/author-pipe';
+import {EmptyRow} from '../empty-row/empty-row';
 declare var bootstrap: any;
 
 @Component({
@@ -11,7 +14,11 @@ declare var bootstrap: any;
   imports: [
 
     RouterLink,
-    NgIf
+    NgIf,
+    ReactiveFormsModule,
+    FormsModule,
+    AuthorPipe,
+    EmptyRow
   ],
   templateUrl: './author-list-component.html',
   styleUrl: './author-list-component.scss'
@@ -20,7 +27,7 @@ export class AuthorListComponent implements OnInit {
 
   protected authors!: Author[];
   protected book!: Book;
-
+  protected searchTerm!: string;
   constructor(private client:AuthorClient) {
   }
 

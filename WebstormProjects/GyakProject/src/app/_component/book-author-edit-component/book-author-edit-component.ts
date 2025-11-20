@@ -11,8 +11,8 @@ import {BookAuthorClient} from '../../_service/book-author-client';
 @Component({
   selector: 'app-book-author-edit-component',
   imports: [
-    FormsModule,
-    JsonPipe
+    FormsModule
+
 
   ],
   templateUrl: './book-author-edit-component.html',
