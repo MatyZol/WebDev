@@ -156,7 +156,11 @@ terminálba: ng build --configuration=production --base-href=http://localhost:80
 
 -> dist mappába -> media mappáta java backend-re a static mappába -> restart
 
+4 esért:
+vegyük egyszerúűre . a Springre kell egy alap configot. forntedned semmi, csak ne engedjük a frontendet megnyitni mielőtt bejelentkezünk
 
+
+chartos kimutatás -> kördiagram -> frontendre valami egyedi dolgot -> kimuatások->
 
 
 
