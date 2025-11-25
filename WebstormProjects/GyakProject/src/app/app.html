@@ -1,3 +1,4 @@
+@if (auth.isAuthenticated()){
 <nav class="navbar bg-dark navbar-expand" data-bs-theme="dark">
   <div class="container">
     <a class="navbar-brand" href="#">
@@ -16,11 +17,14 @@
         <li class="nav-item">
           <a class="nav-link " [routerLink]="'authors'" [routerLinkActive]="'active'" >Szerzők</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link " [routerLink]="'bookAuthor'" [routerLinkActive]="'active'" >Könyv és szerző kapcsolatkezelés</a>
-        </li>
+<!--        <li class="nav-item">-->
+<!--          <a class="nav-link " [routerLink]="'bookAuthor'" [routerLinkActive]="'active'" >Könyv és szerző kapcsolatkezelés</a>-->
+<!--        </li>-->
+
       </ul>
+      <button class="btn btn-outline-danger" (click)="auth.logout()">Kijelentkezés</button>
     </div>
   </div>
 </nav>
+}
 <router-outlet />

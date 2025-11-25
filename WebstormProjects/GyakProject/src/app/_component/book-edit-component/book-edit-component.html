@@ -19,6 +19,15 @@
             <input class="form-control" placeholder="Title"  id="title" [(ngModel)]="book.title">
             <label for="title">Title</label>
           </div>
+          <div class="form-floating mt-2">
+            <select class="form-select" id="authorId" [(ngModel)]="book.author" [compareWith]="compareAuthors">
+              @for (author of authors ; track author.authorID)
+              {
+                <option [ngValue]="author"> {{author.firstName+" "+author.lastName}}</option>
+              }
+            </select>
+            <label for="authorId">Szerző</label>
+          </div>
 
           <div class="form-floating mt-2">
             <input class="form-control" placeholder="Publisher" id="publisher" [(ngModel)]="book.publisher">

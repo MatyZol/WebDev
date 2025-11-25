@@ -1,0 +1,35 @@
+<div class="container d-flex justify-content-center align-items-center vh-100">
+  <div class="card shadow p-4" style="max-width: 420px; width: 100%;">
+
+    <h3 class="text-center mb-4">Bejelentkezés</h3>
+
+    <form (ngSubmit)="onSubmit()">
+
+      <div class="mb-3">
+        <label class="form-label">Felhasználónév</label>
+        <input type="text" class="form-control" [(ngModel)]="username" name="username" required>
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label">Jelszó</label>
+        <input type="password" class="form-control" [(ngModel)]="password" name="password" required>
+      </div>
+
+      <div *ngIf="errorMessage" class="alert alert-danger py-2">
+        {{ errorMessage }}
+      </div>
+
+      <button class="btn btn-primary w-100" type="submit" [disabled]="loading">
+        <span *ngIf="!loading">Belépés</span>
+        <span *ngIf="loading" class="spinner-border spinner-border-sm"></span>
+      </button>
+
+    </form>
+
+    <div class="text-center mt-3">
+      <small>Nem vagy még regisztrálva?</small><br>
+      <a routerLink="/register">Regisztráció</a>
+    </div>
+
+  </div>
+</div>

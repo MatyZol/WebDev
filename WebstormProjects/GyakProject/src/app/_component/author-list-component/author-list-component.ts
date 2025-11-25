@@ -14,7 +14,6 @@ declare var bootstrap: any;
   imports: [
 
     RouterLink,
-    NgIf,
     ReactiveFormsModule,
     FormsModule,
     AuthorPipe,

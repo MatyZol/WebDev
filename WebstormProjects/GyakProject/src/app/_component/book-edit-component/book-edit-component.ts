@@ -12,8 +12,7 @@ import {AuthorClient} from '../../_service/author-client';
   selector: 'app-book-edit-component',
   imports: [
     FormsModule,
-    JsonPipe,
-    DatePipe
+    JsonPipe
   ],
   templateUrl: './book-edit-component.html',
   styleUrl: './book-edit-component.scss'
@@ -23,15 +22,27 @@ export class BookEditComponent implements OnInit{
   protected book!: Book;
   protected author!: Author;
   protected param!: string | null;
+  protected authors!: Author[];
   constructor(
     private bookClient:BookClient,
     private route:ActivatedRoute,
-    private router:Router
+    private router:Router,
+    private authorClient:AuthorClient
   ) {
+  }
+
+  protected compareAuthors(author1: Author, author2: Author): boolean {
+    
+    return author1 && author2 ? author1.authorID === author2.authorID : author1 === author2;
   }
 
 
   ngOnInit(): void {
+
+    this.authorClient.findAll().subscribe( authors => {
+      this.authors = authors;
+    })
+
     this.route.paramMap.subscribe(params =>
     {
       this.param=params.get('isbn');

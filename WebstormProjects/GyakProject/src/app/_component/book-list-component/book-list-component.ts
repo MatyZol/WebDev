@@ -7,6 +7,7 @@ import {RouterLink} from '@angular/router';
 import {FormsModule} from '@angular/forms';
 import {BookPipe} from '../../_pipe/book-pipe';
 import {EmptyRow} from '../empty-row/empty-row';
+import {AuthService} from '../../_service/auth-service';
 
 @Component({
   selector: 'app-book-list-component',
@@ -25,7 +26,7 @@ export class BookListComponent implements OnInit {
   protected books!: Book[];
   protected searchTerm!: string;
 
-  constructor(private client:BookClient) {
+  constructor(private client:BookClient,private auth: AuthService) {
   }
 
 
@@ -38,6 +39,10 @@ export class BookListComponent implements OnInit {
         }
       }
     )
+  }
+
+  onLogout(){
+    this.auth.logout();
   }
 
   protected delete(isbn:string):void {

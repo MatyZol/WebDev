@@ -5,13 +5,19 @@ import {AuthorListComponent} from './_component/author-list-component/author-lis
 import {BookEditComponent} from './_component/book-edit-component/book-edit-component';
 import {BookAuthorEditComponent} from './_component/book-author-edit-component/book-author-edit-component';
 import {AuthorEditComponent} from './_component/author-edit-component/author-edit-component';
+import {authGuard} from './_guards/auth-guard';
+import {LoginComponent} from './_component/login-component/login-component';
+import {RegisterComponent} from './_component/register-component/register-component';
 
 
 export const routes: Routes = [
-  {path:'books',component:BookListComponent},
-  {path:'authors',component:AuthorListComponent},
-  {path:'books/:isbn',component:BookEditComponent},
-  {path:'authors/:authorID',component:AuthorEditComponent},
-  {path:'bookAuthor',component:BookAuthorEditComponent},
-  {path:'**',redirectTo:'books'}
+  {path:'',redirectTo:'books',pathMatch:'full'},
+  {path:'books',component:BookListComponent,canActivate:[authGuard]},
+  {path:'authors',component:AuthorListComponent,canActivate:[authGuard]},
+  {path:'books/:isbn',component:BookEditComponent,canActivate:[authGuard]},
+  {path:'authors/:authorID',component:AuthorEditComponent,canActivate:[authGuard]},
+  {path:'bookAuthor',component:BookAuthorEditComponent,canActivate:[authGuard]},
+  { path: 'login', component: LoginComponent},
+  { path: 'register', component: RegisterComponent },
+
 ];
