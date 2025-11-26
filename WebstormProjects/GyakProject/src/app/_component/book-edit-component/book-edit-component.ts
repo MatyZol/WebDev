@@ -32,7 +32,7 @@ export class BookEditComponent implements OnInit{
   }
 
   protected compareAuthors(author1: Author, author2: Author): boolean {
-    
+
     return author1 && author2 ? author1.authorID === author2.authorID : author1 === author2;
   }
 

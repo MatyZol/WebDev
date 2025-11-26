@@ -6,9 +6,7 @@ import lombok.AllArgsConstructor;
 import lombok.NonNull;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.time.OffsetDateTime;
-import java.time.ZoneOffset;
-import java.time.format.DateTimeFormatter;
+
 import java.util.List;
 
 @RestController
@@ -16,6 +14,16 @@ import java.util.List;
 public class AuthorControllerImpl implements AuthorController {
 
     private AuthorRepository authorRepository;
+
+    @Override
+    public Long getTotalAuthorCount() {
+        return authorRepository.countAllAuthors();
+    }
+
+    @Override
+    public List<Object[]> getBookCountByAuthor() {
+        return authorRepository.countBooksByAuthor();
+    }
 
     @Override
     public List<Author> getAll() {

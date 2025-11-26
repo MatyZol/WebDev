@@ -30,7 +30,7 @@ public class BookAuthorRunner implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {
 
-        for (int i = 0; i < 100; i++) {
+        for (int i = 0; i < 20; i++) {
 
 
         final var author = Author.builder()
@@ -45,6 +45,8 @@ public class BookAuthorRunner implements CommandLineRunner {
                     .title(FAKER.book().title())
                     .publisher(FAKER.book().publisher())
                     .price(bookUtils.getPrice())
+                    .pageNumber(bookUtils.getPageNumber())
+                    .genre(bookUtils.getGenre())
                     .build();
 
         author.addBook(book);

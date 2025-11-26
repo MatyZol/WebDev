@@ -8,6 +8,7 @@ import {AuthorEditComponent} from './_component/author-edit-component/author-edi
 import {authGuard} from './_guards/auth-guard';
 import {LoginComponent} from './_component/login-component/login-component';
 import {RegisterComponent} from './_component/register-component/register-component';
+import {StatisticsComponent} from './_component/statistics-component/statistics-component';
 
 
 export const routes: Routes = [
@@ -19,5 +20,6 @@ export const routes: Routes = [
   {path:'bookAuthor',component:BookAuthorEditComponent,canActivate:[authGuard]},
   { path: 'login', component: LoginComponent},
   { path: 'register', component: RegisterComponent },
+  {path:'stats',component:StatisticsComponent,canActivate:[authGuard]}
 
 ];

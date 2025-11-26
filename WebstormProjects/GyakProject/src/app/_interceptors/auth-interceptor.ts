@@ -1,4 +1,3 @@
-import { Injectable } from '@angular/core';
 import { HttpInterceptorFn } from '@angular/common/http';
 import { inject } from '@angular/core';
 import { AuthService} from '../_service/auth-service';

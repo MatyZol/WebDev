@@ -7,10 +7,8 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.CorsRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
-import java.sql.SQLOutput;
 import java.util.Random;
-import java.util.stream.Collectors;
-import java.util.stream.IntStream;
+
 
 @SpringBootApplication
 public class Application extends SpringBootServletInitializer {

@@ -4,16 +4,16 @@ import hu.unideb.model.Author;
 import hu.unideb.model.Book;
 import hu.unideb.repository.AuthorRepository;
 import hu.unideb.repository.BookRepository;
-import hu.unideb.util.BookUtils;
+
 import lombok.AllArgsConstructor;
 import lombok.NonNull;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.web.bind.annotation.RequestMapping;
+
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.HashSet;
+
 import java.util.List;
-import java.util.Set;
+
 
 @RestController
 @AllArgsConstructor
@@ -51,6 +51,23 @@ public class BookControllerImpl implements BookController {
         }
 
         return bookRepository.save(book);
+    }
+
+    @Override
+    public List<Object[]> getBooksByGenre() {
+        return bookRepository.countBooksByGenre();
+    }
+
+    @Override
+    public Long getTotalBookCount() {
+        return bookRepository.countAllBooks();
+    }
+
+
+
+    @Override
+    public List<Object[]> getBooksByPublisher() {
+        return bookRepository.countBooksByPublisher();
     }
 
     @Override

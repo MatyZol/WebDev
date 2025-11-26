@@ -1,0 +1,93 @@
+<div class="container mt-4">
+  <h2>Statisztikák</h2>
+  <div class="row mb-4">
+    <div class="col-md-6">
+      <div class="card bg-primary text-white">
+        <div class="card-body">
+          <h5 class="card-title">Összes könyv</h5>
+          <p class="card-text fs-3">{{ totalBookCount }} db</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="card bg-warning text-dark">
+        <div class="card-body">
+          <h5 class="card-title">Összes szerző</h5>
+          <p class="card-text fs-3">{{ totalAuthorCount }} fő</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6 mt-4">
+      <div class="card bg-success text-white">
+        <div class="card-body">
+          <h5 class="card-title">Könyvek árának átlaga</h5>
+          <p class="card-text fs-3">{{ getAvgPrice().toFixed(2) }}$ </p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6 mt-4">
+      <div class="card bg-info text-white">
+        <div class="card-body">
+          <h5 class="card-title">Könyvek oldaszámainak átlaga</h5>
+          <p class="card-text fs-3">{{ getAvgPage().toFixed(0) }} oldal </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="row ">
+    <div class="col-md-6 mb-4">
+      <div class="card">
+        <div class="card-header bg-primary text-white">Műfajok Eloszlása</div>
+        <div class="card-body" style="height: 400px;">
+          @if (genreChartData.datasets.length) {
+            <canvas baseChart
+                    [data]="genreChartData"
+                    [type]="genreChartType">
+            </canvas>
+          } @else {
+            <p>Nincs műfaj statisztika az adatokban.</p>
+          }
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6 mb-4 ">
+      <div class="card">
+        <div class="card-header bg-success text-white">Könyvek száma szerzőnként</div>
+        <div class="card-body" style="height: 400px;">
+          @if (authorChartData.datasets.length) {
+            <canvas baseChart
+                    [data]="authorChartData"
+                    [options]="authorChartOptions"
+                    [type]="authorChartType">
+            </canvas>
+          } @else {
+            <p>Nincs szerzői statisztika az adatokban.</p>
+          }
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6 mb-4 offset-md-3">
+      <div class="card">
+        <div class="card-header bg-dark text-white">Könyvek száma kiadóként</div>
+        <div class="card-body" style="height: 400px;">
+          @if (publisherChartData.datasets.length) {
+            <canvas baseChart
+                    [data]="publisherChartData"
+                    [options]="publisherChartOptions"
+                    [type]="publisherChartType">
+            </canvas>
+          } @else {
+            <p>Nincs kiadói statisztika az adatokban.</p>
+          }
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+</div>

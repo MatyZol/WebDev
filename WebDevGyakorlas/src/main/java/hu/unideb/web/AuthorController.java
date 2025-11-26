@@ -9,6 +9,11 @@ import java.util.List;
 @RestController
 public interface AuthorController {
 
+    @GetMapping("/stats/book-count")
+    List<Object[]> getBookCountByAuthor();
+
+    @GetMapping("/stats/total-authors")
+    Long getTotalAuthorCount();
 
     @GetMapping("/api/author")
     List<Author> getAll();

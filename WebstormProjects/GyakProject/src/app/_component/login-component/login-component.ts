@@ -1,10 +1,10 @@
-// login-component.ts
+
 import {Component} from '@angular/core';
 import { AuthService} from '../../_service/auth-service';
 import {Router, RouterLink} from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
-import { HttpErrorResponse } from '@angular/common/http'; // Hozzáadva
+import { HttpErrorResponse } from '@angular/common/http';
 
 @Component({
   selector: 'app-login',
@@ -28,14 +28,14 @@ export class LoginComponent {
     this.auth.login(this.username, this.password).subscribe({
       next: () => {
         this.loading = false;
-        this.router.navigate(['/']); // Sikeres bejelentkezés
+        this.router.navigate(['/']);
       },
-      error: (err: HttpErrorResponse) => { // Típus hozzáadva a hibakezeléshez
+      error: (err: HttpErrorResponse) => {
         this.loading = false;
-        if (err.status === 401) { // 401 UNAUTHORIZED: Hibás belépési adatok
+        if (err.status === 401) {
           this.errorMessage = 'Hibás felhasználónév vagy jelszó!';
         } else {
-          // Más hiba (pl. szerverhiba 500)
+
           this.errorMessage = 'Hiba történt a bejelentkezés során.';
         }
       }

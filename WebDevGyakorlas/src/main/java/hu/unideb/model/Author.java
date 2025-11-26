@@ -1,13 +1,13 @@
 package hu.unideb.model;
 
 
-import com.fasterxml.jackson.annotation.JsonBackReference;
+
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.*;
 
 
-import java.time.OffsetDateTime;
+
 import java.util.*;
 
 @Data
@@ -24,13 +24,6 @@ public class Author {
     private String firstName;
     private String lastName;
     private String dateOfBirth;
-
-
-//    @ManyToMany(mappedBy = "authors", cascade = {CascadeType.PERSIST, CascadeType.MERGE})
-//    @JsonIgnore
-//    @Builder.Default
-//    @ToString.Exclude
-//    private Set<Book> books = new HashSet<>();
 
 
     @OneToMany(mappedBy = "author",fetch = FetchType.LAZY)

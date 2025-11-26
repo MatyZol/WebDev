@@ -4,9 +4,9 @@
       <div class="card my-2">
         <div class="card-header" [class.text-bg-primary]="param!='create'" [class.text-bg-dark]="param == 'create'" >
           @if (param=='create'){
-            Create
+            Hozzáadás
           } @else {
-            Update
+            Frissítés
           }
         </div>
         <div class="card-body ">
@@ -16,8 +16,12 @@
           </div>
 
           <div class="form-floating mt-2">
-            <input class="form-control" placeholder="Title"  id="title" [(ngModel)]="book.title">
-            <label for="title">Title</label>
+            <input class="form-control" placeholder="Cím"  id="title" [(ngModel)]="book.title">
+            <label for="title">Cím</label>
+          </div>
+          <div class="form-floating mt-2">
+            <input class="form-control" placeholder="Műfaj"  id="genre" [(ngModel)]="book.genre">
+            <label for="genre">Műfaj</label>
           </div>
           <div class="form-floating mt-2">
             <select class="form-select" id="authorId" [(ngModel)]="book.author" [compareWith]="compareAuthors">
@@ -30,13 +34,16 @@
           </div>
 
           <div class="form-floating mt-2">
-            <input class="form-control" placeholder="Publisher" id="publisher" [(ngModel)]="book.publisher">
-            <label for="publisher">Publisher</label>
+            <input class="form-control" placeholder="Kiadó" id="publisher" [(ngModel)]="book.publisher">
+            <label for="publisher">Kiadó</label>
           </div>
-
           <div class="form-floating mt-2">
-            <input class="form-control" placeholder="Price" id="price" [(ngModel)]="book.price">
-            <label for="price">Price</label>
+            <input class="form-control" placeholder="Oldalszám"  id="pageNumber" [(ngModel)]="book.pageNumber">
+            <label for="pageNumber">Oldalszám</label>
+          </div>
+          <div class="form-floating mt-2">
+            <input class="form-control" placeholder="Ár" id="price" [(ngModel)]="book.price">
+            <label for="price">Ár</label>
           </div>
 
           <div class="mt-2">

@@ -23,27 +23,12 @@ export class AuthService {
       );
   }
 
-  // register(username: string, password: string) {
-  //   return this.http.post<any>(`${this.apiUrl}/register`, { username, password })
-  //     .pipe(
-  //       tap(res => {
-  //         if (res.token) {
-  //           localStorage.setItem('token', res.token);
-  //         }
-  //       })
-  //     );
-  // }
+
   register(username: string, password: string) {
-    // A post<any> maradhat, de most már tudjuk, hogy nem token jön vissza
+
     return this.http.post<any>(`${this.apiUrl}/register`, { username, password })
       .pipe(
         tap(() => {
-          // KIVÉVE: A token tárolása a regisztrációból!
-          // if (res.token) {
-          //   localStorage.setItem('token', res.token);
-          // }
-
-          // Ezen a ponton már nincs szükség kódra, a komponensre bízzuk az átirányítást
         })
       );
   }
