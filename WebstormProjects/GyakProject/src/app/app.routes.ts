@@ -18,8 +18,8 @@ export const routes: Routes = [
   {path:'books/:isbn',component:BookEditComponent,canActivate:[authGuard]},
   {path:'authors/:authorID',component:AuthorEditComponent,canActivate:[authGuard]},
   {path:'bookAuthor',component:BookAuthorEditComponent,canActivate:[authGuard]},
-  { path: 'login', component: LoginComponent},
-  { path: 'register', component: RegisterComponent },
+  {path:'login', component: LoginComponent},
+  {path:'register', component: RegisterComponent},
   {path:'stats',component:StatisticsComponent,canActivate:[authGuard]}
 
 ];
